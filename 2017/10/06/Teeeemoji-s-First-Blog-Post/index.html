@@ -52,7 +52,7 @@
     <meta name="author" content="Teeeemoji">
     <meta name="description" itemprop="description" content="非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.
 2017-10-06 创建自 Hexo.">
-    <meta name="keywords" content=",lala,haha,lele">
+    <meta name="keywords" content=",testing,搭建博客,hexo">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};
@@ -186,12 +186,7 @@
 
     <style>
       body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
+        background-image: url(/img/background.png);
       }
     </style>
 
@@ -242,11 +237,11 @@
     <meta property="og:image" content="http://teeeemoji.xyz/img/favicon.png" />
     <meta property="og:description" content="非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.
 2017-10-06 创建自 Hexo.">
-    <meta property="og:article:tag" content="lala"> <meta property="og:article:tag" content="haha"> <meta property="og:article:tag" content="lele"> 
+    <meta property="og:article:tag" content="testing"> <meta property="og:article:tag" content="搭建博客"> <meta property="og:article:tag" content="hexo"> 
 
     
         <meta property="article:published_time" content="Fri Oct 06 2017 15:47:58 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Oct 06 2017 22:16:14 GMT+0800" />
+        <meta property="article:modified_time" content="Sat Oct 07 2017 21:13:47 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +269,7 @@
     "mainEntityOfPage": "http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/index.html",
     "headline": "Teeeemoji's First Blog Post",
     "datePublished": "Fri Oct 06 2017 15:47:58 GMT+0800",
-    "dateModified": "Fri Oct 06 2017 22:16:14 GMT+0800",
+    "dateModified": "Sat Oct 07 2017 21:13:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Teeeemoji",
@@ -282,7 +277,7 @@
             "@type": "ImageObject",
             "url": "/img/avatar.png"
         },
-        "description": "Hi, nice to meet you"
+        "description": "只是一个人,因为很想你,,日事清,不贰过"
     },
     "publisher": {
         "@type": "Organization",
@@ -292,7 +287,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",lala,haha,lele",
+    "keywords": ",testing,搭建博客,hexo",
     "description": "非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.
 2017-10-06 创建自 Hexo.",
 }
@@ -359,7 +354,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#因为-hexo-识别标题-需要-后面跟一个空格"><span class="post-toc-number">1.</span> <span class="post-toc-text">因为 hexo 识别标题, 需要#后面跟一个空格</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#因为-hexo-识别-markdown-标题-需要-后面跟一个空格"><span class="post-toc-number">1.</span> <span class="post-toc-text">因为 hexo 识别 markdown 标题, 需要#后面跟一个空格</span></a></li></ol>
     </ul>
     
 
@@ -384,7 +379,7 @@
             <script type="text/ls-javascript" id="post-thumbnail-script">
     var randomNum = Math.floor(Math.random() * 19 + 1);
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/galaxy/galaxy-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
 </script>
 
@@ -425,6 +420,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -434,7 +441,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/haha/">haha</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/lala/">lala</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/lele/">lele</a>
+        <a class="post_tag-link" href="/tags/hexo/">hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/testing/">testing</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/搭建博客/">搭建博客</a>
     </ul>
     
 
@@ -509,12 +516,26 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
 </blockquote>
 <p>##为什么 markdown 不生效?</p>
-<h3 id="因为-hexo-识别标题-需要-后面跟一个空格"><a href="#因为-hexo-识别标题-需要-后面跟一个空格" class="headerlink" title="因为 hexo 识别标题, 需要#后面跟一个空格"></a>因为 hexo 识别标题, 需要#后面跟一个空格</h3><p><strong>双*号括起来的</strong> <code>adf</code><br><em>单\</em>号括起来的*<br><strong>双_括起来的</strong><br><em>单\</em>括起来的_</p>
-<figure class="highlight javascript"><figcaption><span>_.compat</span><a href="http://teeeemoji.xyz">teeeemoji.xyz</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(<span class="string">"hello world"</span>);</div></pre></td></tr></table></figure>
-<p><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website">这里是一个超链接</a> adf </p>
-<p><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website"><img src="https://s.gravatar.com/avatar/7c5a002366e136a8413c7845f98398ad?size=100&amp;default=retro" alt="touxiangtupian" title="touxiang"></a></p>
-<p><a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#116;&#101;&#101;&#101;&#x65;&#x6d;&#111;&#x6a;&#105;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#116;&#101;&#101;&#101;&#x65;&#x6d;&#111;&#x6a;&#105;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h3 id="因为-hexo-识别-markdown-标题-需要-后面跟一个空格"><a href="#因为-hexo-识别-markdown-标题-需要-后面跟一个空格" class="headerlink" title="因为 hexo 识别 markdown 标题, 需要#后面跟一个空格"></a>因为 hexo 识别 markdown 标题, 需要#后面跟一个空格</h3><p><strong>双*号括起来的</strong><br><em>单\</em>号括起来的*<br><strong>双_括起来的</strong><br><em>单\</em>括起来的_<br><code>单个反引号括起来</code></p>
+<p><code>javascript _.compat http://teeeemoji.xyz teeeemoji.xyz
+alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website">这里是一个超链接</a></p>
+<p>下面哪个是图片超链接<br><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website"><img src="https://s.gravatar.com/avatar/7c5a002366e136a8413c7845f98398ad?size=100&amp;default=retro" alt="touxiangtupian" title="touxiang"></a></p>
+<p>下面哪个是网址超链接</p>
+<teeeemoji.github.io>
 
+
+
+</teeeemoji.github.io>
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/">http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/</a>
+                    </p>
+                </blockquote>
         
     
 
@@ -556,14 +577,6 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/10/06/testing-2-post/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
@@ -585,7 +598,7 @@
 <aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
     <div id="sidebar-main">
         <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar-header.png);">
     <!-- Top bar -->
     <div class="top-bar"></div>
 
@@ -605,7 +618,7 @@
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
+        teeeemoji@163.com
         <b class="caret"></b>
     </a>
 </div>
@@ -618,7 +631,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto: teeeeemoji@163.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -654,7 +667,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -662,11 +675,70 @@
 
     <!-- Categories  -->
     
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/日常/">日常<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
 
     <!-- Pages  -->
     
+        <li>
+            <a href="/things" title="Things">
+                
+                Things
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/links" title="Links">
+                
+                Links
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="Tags">
+                
+                Tags
+            </a>
+        </li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">1</span>
+            </a>
+        </li>
+        
     
 </ul>
 
@@ -710,6 +782,12 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- About Theme -->
 <!--
 
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
 -->
 
     </div>
@@ -738,32 +816,20 @@ It will not impact the appearance and can give developers a lot of support :)
         <div class="mdl-mini-footer--left-section sns-list">
     <!-- Twitter -->
     
-        <a href="https://twitter.com/twitter" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
 
     <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
     
 
     <!-- Google + -->
     
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
 
     <!-- Weibo -->
+    
+        <a href="http://weibo.com/u/6092439663/home" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
     
 
     <!-- Instagram -->
@@ -773,6 +839,12 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Github -->
+    
+        <a href="https://github.com/teeeemoji" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
     
 
     <!-- LinkedIn -->
@@ -794,7 +866,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Teeeemoji
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Teeeemoji
             
         </div>
 
@@ -878,6 +950,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -888,6 +964,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

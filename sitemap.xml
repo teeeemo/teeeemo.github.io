@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/</loc>
+    <loc>http://teeeemoji.xyz/timeline/index.html</loc>
     
-    <lastmod>2017-10-06T14:16:14.000Z</lastmod>
+    <lastmod>2017-10-07T13:34:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://teeeemoji.xyz/2017/10/06/testing-2-post/</loc>
+    <loc>http://teeeemoji.xyz/tags/index.html</loc>
     
-    <lastmod>2017-10-06T07:54:41.000Z</lastmod>
+    <lastmod>2017-10-07T13:26:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://teeeemoji.xyz/links/index.html</loc>
+    
+    <lastmod>2017-10-07T13:19:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/</loc>
+    
+    <lastmod>2017-10-07T13:13:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://teeeemoji.xyz/things/index.html</loc>
+    
+    <lastmod>2017-10-07T08:27:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://teeeemoji.xyz/about/index.html</loc>
+    
+    <lastmod>2017-10-07T08:17:06.000Z</lastmod>
     
   </url>
   
