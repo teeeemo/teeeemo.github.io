@@ -2277,7 +2277,6 @@ $(document).ready(function() {
         'click',
         function() {
             var child;
-
             child = this.childNodes[0].classList;
 
             if (child.contains('MD-burger-arrow')) {

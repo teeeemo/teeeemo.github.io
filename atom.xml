@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-07T13:13:47.000Z</updated>
+  <updated>2017-10-07T17:12:15.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -17,13 +17,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PSP 篇</title>
+    <link href="http://teeeemoji.xyz/2017/10/08/PSP-%E7%AF%87/"/>
+    <id>http://teeeemoji.xyz/2017/10/08/PSP-篇/</id>
+    <published>2017-10-07T17:12:15.000Z</published>
+    <updated>2017-10-07T17:12:15.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/img/post/psp-running.png&quot; alt=&quot;psp 现在的样子&quot; title=&quot;PSP 通电&quot;&gt;&lt;/p&gt;
+&lt;p&gt;高中的时候我把玩着同学 PSP 的时候, 内心是非常渴望自己也能有一台的. 那时候几个宿舍的同学, 拿着阿达和 OB 的两台 PSP, 轮流玩高达, 玩孙悟空之类的对战格斗游戏, 根本没有什么技术可言, 就是一顿乱按, 也爽的不行.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="物件" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/%E7%89%A9%E4%BB%B6/"/>
+    
+    
+      <category term="PSP" scheme="http://teeeemoji.xyz/tags/PSP/"/>
+    
+      <category term="galgame" scheme="http://teeeemoji.xyz/tags/galgame/"/>
+    
+      <category term="命运石之门" scheme="http://teeeemoji.xyz/tags/%E5%91%BD%E8%BF%90%E7%9F%B3%E4%B9%8B%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客美化进程</title>
+    <link href="http://teeeemoji.xyz/2017/10/07/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E8%BF%9B%E7%A8%8B/"/>
+    <id>http://teeeemoji.xyz/2017/10/07/博客美化进程/</id>
+    <published>2017-10-07T15:49:32.000Z</published>
+    <updated>2017-10-07T17:21:28.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Teeeemoji-的博客美化进程&quot;&gt;&lt;a href=&quot;#Teeeemoji-的博客美化进程&quot; class=&quot;headerlink&quot; title=&quot;Teeeemoji 的博客美化进程&quot;&gt;&lt;/a&gt;Teeeemoji 的博客美化进程&lt;/h1&gt;&lt;p&gt;要美化的地方右好多好多, 要添加的新功能也有好多&lt;/p&gt;
+&lt;h2 id=&quot;待办事项&quot;&gt;&lt;a href=&quot;#待办事项&quot; class=&quot;headerlink&quot; title=&quot;待办事项&quot;&gt;&lt;/a&gt;待办事项&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;LOGO&lt;/li&gt;
+&lt;li&gt;favicon 更换&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
+    
+      <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Teeeemoji&#39;s First Blog Post</title>
     <link href="http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/"/>
     <id>http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/</id>
     <published>2017-10-06T07:47:58.000Z</published>
-    <updated>2017-10-07T13:13:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.</p><p>2017-10-06 创建自 Hexo.</p><a id="more"></a><p>这只是一篇实验性的文章.</p><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p></blockquote><p>##为什么 markdown 不生效?</p><h3 id="因为-hexo-识别-markdown-标题-需要-后面跟一个空格"><a href="#因为-hexo-识别-markdown-标题-需要-后面跟一个空格" class="headerlink" title="因为 hexo 识别 markdown 标题, 需要#后面跟一个空格"></a>因为 hexo 识别 markdown 标题, 需要#后面跟一个空格</h3><p><strong>双*号括起来的</strong><br><em>单\</em>号括起来的*<br><strong>双_括起来的</strong><br><em>单\</em>括起来的_<br><code>单个反引号括起来</code></p><p><code>javascript _.compat http://teeeemoji.xyz teeeemoji.xyzalert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website">这里是一个超链接</a></p><p>下面哪个是图片超链接<br><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website"><img src="https://s.gravatar.com/avatar/7c5a002366e136a8413c7845f98398ad?size=100&amp;default=retro" alt="touxiangtupian" title="touxiang"></a></p><p>下面哪个是网址超链接</p><teeeemoji.github.io></teeeemoji.github.io>]]></content>
+    <updated>2017-10-07T15:50:22.000Z</updated>
     
     <summary type="html">
     
