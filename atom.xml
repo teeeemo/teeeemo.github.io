@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Teeeemoji</title>
+  
+  <subtitle>teeeemoji@163.com</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://teeeemoji.xyz/"/>
+  <updated>2017-10-06T07:54:41.000Z</updated>
+  <id>http://teeeemoji.xyz/</id>
+  
+  <author>
+    <name>Teeeemoji</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testing 2 post</title>
+    <link href="http://teeeemoji.xyz/2017/10/06/testing-2-post/"/>
+    <id>http://teeeemoji.xyz/2017/10/06/testing-2-post/</id>
+    <published>2017-10-06T07:54:04.000Z</published>
+    <updated>2017-10-06T07:54:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="new-title"><a href="#new-title" class="headerlink" title="new title"></a>new title</h1><h2 id="new-h2-title"><a href="#new-h2-title" class="headerlink" title="new h2 title"></a>new h2 title</h2><h3 id="new-h3-title"><a href="#new-h3-title" class="headerlink" title="new h3 title"></a>new h3 title</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;new-title&quot;&gt;&lt;a href=&quot;#new-title&quot; class=&quot;headerlink&quot; title=&quot;new title&quot;&gt;&lt;/a&gt;new title&lt;/h1&gt;&lt;h2 id=&quot;new-h2-title&quot;&gt;&lt;a href=&quot;#new-h2-title&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Teeeemoji&#39;s First Blog Post</title>
+    <link href="http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/"/>
+    <id>http://teeeemoji.xyz/2017/10/06/Teeeemoji-s-First-Blog-Post/</id>
+    <published>2017-10-06T07:47:58.000Z</published>
+    <updated>2017-10-06T14:16:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.</p><p>2017-10-06 创建自 Hexo.</p><a id="more"></a><p>这只是一篇实验性的文章.</p><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p></blockquote><p>##为什么 markdown 不生效?</p><h3 id="因为-hexo-识别标题-需要-后面跟一个空格"><a href="#因为-hexo-识别标题-需要-后面跟一个空格" class="headerlink" title="因为 hexo 识别标题, 需要#后面跟一个空格"></a>因为 hexo 识别标题, 需要#后面跟一个空格</h3><p><strong>双*号括起来的</strong> <code>adf</code><br><em>单\</em>号括起来的*<br><strong>双_括起来的</strong><br><em>单\</em>括起来的_</p><figure class="highlight javascript"><figcaption><span>_.compat</span><a href="http://teeeemoji.xyz">teeeemoji.xyz</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(<span class="string">"hello world"</span>);</div></pre></td></tr></table></figure><p><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website">这里是一个超链接</a> adf </p><p><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website"><img src="https://s.gravatar.com/avatar/7c5a002366e136a8413c7845f98398ad?size=100&amp;default=retro" alt="touxiangtupian" title="touxiang"></a></p><p><a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#116;&#101;&#101;&#101;&#x65;&#x6d;&#111;&#x6a;&#105;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#116;&#101;&#101;&#101;&#x65;&#x6d;&#111;&#x6a;&#105;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.&lt;/p&gt;
+&lt;p&gt;2017-10-06 创建自 Hexo.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="lala" scheme="http://teeeemoji.xyz/tags/lala/"/>
+    
+      <category term="haha" scheme="http://teeeemoji.xyz/tags/haha/"/>
+    
+      <category term="lele" scheme="http://teeeemoji.xyz/tags/lele/"/>
+    
+  </entry>
+  
+</feed>
