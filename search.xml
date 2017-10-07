@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[PSP 篇]]></title>
+      <url>/2017/10/08/my-psp-20171007/</url>
+      <content type="html"><![CDATA[<p><img src="/img/post/psp-running.png" alt="psp 现在的样子" title="PSP 通电"></p>
+<p>高中的时候我把玩着同学 PSP 的时候, 内心是非常渴望自己也能有一台的. 那时候几个宿舍的同学, 拿着阿达和 OB 的两台 PSP, 轮流玩高达, 玩孙悟空之类的对战格斗游戏, 根本没有什么技术可言, 就是一顿乱按, 也爽的不行.</p>
+<a id="more"></a>
+<p>后来是大二下学期, 我在宿舍沉迷 PC 版的 galgame - Clannad, 被古河渚骗去不少眼泪, 因此和 galgame 结下不解之缘. </p>
+<p>所以大二暑假时期, 我这个厚脸皮的大学生跟父亲提到想要一个游戏机, 而父亲竟然非常爽快地答应了. 尽管是现在仍回忆不起当时的情形, 父亲为什么会答应我这不成熟的请求.</p>
+<p>当然, 大二大三就沉迷游戏不可自拔, 当时还在恋爱, 也在日复一日地玩’恋爱’游戏.</p>
+<p>给 PSP 盖上贴纸的契机, 是我看了一部动漫 - &lt;命运石之门 - steins;gate&gt;, 一切都是石头门的选择.看完动漫已然沉迷, 正好找到了 PSP 汉化版游戏, 一顿玩之后决定贴个膜吧. </p>
+<p>之后更是把<steins;gate>推荐给女朋友玩, 那个旺仔就是她贴上去的, 虽然我和她已经分手多年, 但这个旺仔至今还好好地.</steins;gate></p>
+<p><img src="/img/post/psp-front.png" alt="psp 正面照" title="PSP 正面"></p>
+<p>背面助手的脸已经掉了, 好惨.</p>
+<p><img src="/img/post/psp-back.png" alt="psp 背面照" title="PSP 背面"></p>
+<p>后来又把 PSP 借给月冥玩, 有点强迫她她玩<steins;gate>, 试试想像喜欢一个作品的人会有多么疯狂.PSP 在她那儿呆了一年才被我收回来.最后, 大学毕业后, PSP 一直在吃灰.那时候我迷上了英雄联盟.</steins;gate></p>
+<p>PSP 已经老了, 屏幕画面显得粗糙, 也不会再有新游戏登录 PSP 平台了, 我也会在 mac 上的 psp 模拟器上玩高清的 PSP 游戏. 我会一直保留着它, 这个陪我度过很长时间, 承载了很多快乐回忆, 悲伤时给我安慰, 的老机器.去年孤身来到北京生活的时候, 我带着我的 PSP, 也许以后我还会再次充满电, 一边回忆从前一边玩着老游戏.</p>
+<p>以后买个陈列架, 把这 PSP 封印进去吧.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+            <category> 物件 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> PSP </tag>
+            
+            <tag> galgame </tag>
+            
+            <tag> 命运石之门 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[博客美化进程]]></title>
+      <url>/2017/10/07/blog-beauty-20171007/</url>
+      <content type="html"><![CDATA[<h1 id="Teeeemoji-的博客美化进程"><a href="#Teeeemoji-的博客美化进程" class="headerlink" title="Teeeemoji 的博客美化进程"></a>Teeeemoji 的博客美化进程</h1><p>要美化的地方右好多好多, 要添加的新功能也有好多</p>
+<h2 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h2><ul>
+<li>LOGO</li>
+<li>favicon 更换</li>
+</ul>
+<a id="more"></a>
+<h2 id="clear-事项"><a href="#clear-事项" class="headerlink" title="clear 事项"></a>clear 事项</h2><ul>
+<li>音乐列表功能, 尝试能不能使用网易云音乐的服务<br>参考 <a href="http://weqeo.com/2016/10/11/Hexo%E4%B8%AD%E6%92%AD%E6%94%BE%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E7%9A%84%E5%AE%9E%E8%B7%B5/" target="_blank" rel="external">weqeo 的博文</a><br>感觉加入网易云音乐的功能非常非常的鸡肋<br>切换文章, 啪地音乐就断了…<br>使用非常简单, 网易云音乐可以直接生成 iframe 的播放器, 插入页面的 layout 中就可以了<br>我最终决定不实用这个功能</li>
+<li>全站 https 加密<br>这个看了看, 我目前没有必要用, 申请友链的话, 我就用 teeeemoji.github.io 就可以了,哈哈</li>
+<li>使用 topPost<br>参照文档<a href="https://material.viosey.com/docs/#/config/services?id=toppost" target="_blank" rel="external">Material topPost</a><br>安装好包, 然后在某个文章的 front-matter 中配置 top: true, 搞定, 置顶某一篇文章</li>
+<li>Rss 订阅服务<br>查半天不知道 rss 有什么用,都是再说怎么用 rss 或者说 rss 的原理的<br>算了, 参照 <a href="https://material.viosey.com/docs/#/config/services?id=rss" target="_blank" rel="external">Material Rss</a>弄一弄, 以后有用到的时候再说吧<br>配置使用 hexo-generator-feed 的 readme.md 中的默认配置</li>
+<li>加入搜索系统<br>使用 Google 的搜索服务好像不顶用啊, 站内搜索毛都没有<br>使用本地搜索体验杠杠的,即时搜索+suggest 既视感, 但是由于要加载 search.xml, 这个文件看起来并不小, 所以网站速度可以想象<br>参考 <a href="https://material.viosey.com/docs/#/config/services?id=%e6%9c%ac%e5%9c%b0%e6%90%9c%e7%b4%a2" target="_blank" rel="external">Material 搜索系统</a><br>还有一种搜索系统, <a href="http://swiftype.com/" target="_blank" rel="external">Swiftype</a>略嫌麻烦, 所以不再尝试了</li>
+<li>数据统计与分析<br>参考文档 <a href="https://material.viosey.com/docs/#/config/services?id=%e6%95%b0%e6%8d%ae%e7%bb%9f%e8%ae%a1%e4%b8%8e%e5%88%86%e6%9e%90" target="_blank" rel="external">Material 数据统计与分析</a><br>加入 <a href="tongji.baidu.com">百度统计</a> 用邮箱注册一个百度统计账号, 贼简单<br>加入 <a href="http://www.umeng.com/" target="_blank" rel="external">cnzz(友盟)</a><br>同样用邮箱注册一个友盟账号, 加入非常简单<br>加入 <a href="analytics.google.com">google analytics</a><br>同样用163邮箱注册一个google账号, 加入非常简单</li>
+<li>评论第三方服务<br>使用 <a href="https://livere.com/" target="_blank" rel="external">LiveRe(来必力)</a><br>使用方法参考<a href="https://material.viosey.com/docs/#/config/services" target="_blank" rel="external">Material 第三方服务</a></li>
+<li>文章添加缩略图<br>这个缩略图, 指的是文章列表显示的每一篇文章头部的图片</li>
+</ul>
+<ol>
+<li>默认的随机缩略图<br>放置在 img/gallaxy/ 目录下, 从 <a href="">NASA</a> 下载的一堆太空美图, 图片质量没得说, 照顾网站速度与主机流量, 都是用的是中等画质的图片</li>
+<li>文章定制的缩略图<br>文章的 front-matter 中设置字段 thumbnail<br>P.S. <a href="https://hexo.io" target="_blank" rel="external">Hexo 官方文档</a>中对 front-matter 的介绍中没看到, 全靠自己灵光一闪实验出来的<br>个人介绍: 只是一个人,因为很想你<br>一句话: 日事清,不贰过 </li>
+</ol>
+<ul>
+<li>更换背景图<br>直接使用我电脑桌面图片了, 风格我自己表示很满意</li>
+<li>添加菜单<br>左侧菜单列表内容, 参考 <a href="https://blog.viosey.com/" target="_blank" rel="external">Viosey’s Blog</a><br>home,归档,分类,gallery,about,friends links,tags,timeline,Articles</li>
+<li>添加 pages<br>上面说的每一个菜单, 其实都对应一个页面, 用下面这种方式先添加页面, 然后按照文档进行配置(有几个页面连配置都不需要)<pre><code>$ hexo new page &#39;xxx&#39;
+</code></pre>添加方式参考 <a href="https://material.viosey.com/docs/#/pages" target="_blank" rel="external">Material 独立页面</a></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> testing </tag>
+            
+            <tag> 搭建博客 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Teeeemoji's First Blog Post]]></title>
+      <url>/2017/10/06/first-post-20171006/</url>
+      <content type="html"><![CDATA[<p>非常高兴能够创建自己的博客, 我希望能经常发表文章, 给其他程序员带来帮助.也能将自己的知识沉淀下来.</p>
+<p>2017-10-06 创建自 Hexo.</p>
+<a id="more"></a>
+<p>这只是一篇实验性的文章.</p>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p>##为什么 markdown 不生效?</p>
+<h3 id="因为-hexo-识别-markdown-标题-需要-后面跟一个空格"><a href="#因为-hexo-识别-markdown-标题-需要-后面跟一个空格" class="headerlink" title="因为 hexo 识别 markdown 标题, 需要#后面跟一个空格"></a>因为 hexo 识别 markdown 标题, 需要#后面跟一个空格</h3><p><strong>双*号括起来的</strong><br><em>单\</em>号括起来的*<br><strong>双_括起来的</strong><br><em>单\</em>括起来的_<br><code>单个反引号括起来</code></p>
+<p><code>javascript _.compat http://teeeemoji.xyz teeeemoji.xyz
+alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website">这里是一个超链接</a></p>
+<p>下面哪个是图片超链接<br><a href="http://teeeemoji.xyz" title="teeemoji&#39;s website"><img src="https://s.gravatar.com/avatar/7c5a002366e136a8413c7845f98398ad?size=100&amp;default=retro" alt="touxiangtupian" title="touxiang"></a></p>
+<p>下面哪个是网址超链接</p>
+<teeeemoji.github.io>
+
+
+
+</teeeemoji.github.io>]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> testing </tag>
+            
+            <tag> 搭建博客 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
