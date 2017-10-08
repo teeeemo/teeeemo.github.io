@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-08T09:21:48.000Z</updated>
+  <updated>2017-10-08T15:14:39.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -17,21 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>国庆一刷&lt;境界的彼方&gt;</title>
+    <link href="http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/"/>
+    <id>http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/</id>
+    <published>2017-10-08T15:13:43.000Z</published>
+    <updated>2017-10-08T15:14:39.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/img/post/jingjiedebifang-1.jpg&quot; alt=&quot;jingjiedebifang-1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;国庆的某一个深夜 B 站闲逛, 打开境界的彼方 TV 第一集, 发现弹幕都在刷 &lt;strong&gt;‘恭喜你发现神作一枚’&lt;/strong&gt;, 加上女主是我在微信上很喜欢的一款萝莉表情, 这番立刻吸引了我的目光.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="anime" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/anime/"/>
+    
+    
+      <category term="anime" scheme="http://teeeemoji.xyz/tags/anime/"/>
+    
+      <category term="境界的彼方" scheme="http://teeeemoji.xyz/tags/%E5%A2%83%E7%95%8C%E7%9A%84%E5%BD%BC%E6%96%B9/"/>
+    
+      <category term="栗山未来" scheme="http://teeeemoji.xyz/tags/%E6%A0%97%E5%B1%B1%E6%9C%AA%E6%9D%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>node package - minimist &amp; 命令行参数解析规则学习笔记</title>
     <link href="http://teeeemoji.xyz/2017/10/08/learn-minimist/"/>
     <id>http://teeeemoji.xyz/2017/10/08/learn-minimist/</id>
     <published>2017-10-08T09:21:48.000Z</published>
-    <updated>2017-10-08T09:21:48.000Z</updated>
+    <updated>2017-10-08T10:12:06.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;node-package-minimist-amp-命令行参数解析规则学习笔记&quot;&gt;&lt;a href=&quot;#node-package-minimist-amp-命令行参数解析规则学习笔记&quot; class=&quot;headerlink&quot; title=&quot;node package - minimist &amp;amp; 命令行参数解析规则学习笔记&quot;&gt;&lt;/a&gt;node package - minimist
-        
-      
+      &lt;h1 id=&quot;node-package-minimist-amp-命令行参数解析规则学习笔记&quot;&gt;&lt;a href=&quot;#node-package-minimist-amp-命令行参数解析规则学习笔记&quot; class=&quot;headerlink&quot; title=&quot;node package - minimist &amp;amp; 命令行参数解析规则学习笔记&quot;&gt;&lt;/a&gt;node package - minimist &amp;amp; 命令行参数解析规则学习笔记&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;我希望使用 node 做一个 &lt;strong&gt;CLI (Command line interface)&lt;/strong&gt; 工具, 因此必须解析命令行参数数组 &lt;em&gt;process.argv&lt;/em&gt;.&lt;/p&gt;
     
     </summary>
     
@@ -97,9 +118,9 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
@@ -120,11 +141,11 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://teeeemoji.xyz/tags/hexo/"/>
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
