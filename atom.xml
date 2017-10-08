@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-07T17:12:15.000Z</updated>
+  <updated>2017-10-08T09:21:48.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node package - minimist &amp; 命令行参数解析规则学习笔记</title>
+    <link href="http://teeeemoji.xyz/2017/10/08/learn-minimist/"/>
+    <id>http://teeeemoji.xyz/2017/10/08/learn-minimist/</id>
+    <published>2017-10-08T09:21:48.000Z</published>
+    <updated>2017-10-08T09:21:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;node-package-minimist-amp-命令行参数解析规则学习笔记&quot;&gt;&lt;a href=&quot;#node-package-minimist-amp-命令行参数解析规则学习笔记&quot; class=&quot;headerlink&quot; title=&quot;node package - minimist &amp;amp; 命令行参数解析规则学习笔记&quot;&gt;&lt;/a&gt;node package - minimist
+        
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://teeeemoji.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="node" scheme="http://teeeemoji.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/node/"/>
+    
+    
+      <category term="node" scheme="http://teeeemoji.xyz/tags/node/"/>
+    
+      <category term="nodejs" scheme="http://teeeemoji.xyz/tags/nodejs/"/>
+    
+      <category term="minimist" scheme="http://teeeemoji.xyz/tags/minimist/"/>
+    
+      <category term="命令行参数解析" scheme="http://teeeemoji.xyz/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
   
   <entry>
     <title>PSP 篇</title>

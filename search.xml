@@ -3,6 +3,113 @@
   
     
     <entry>
+      <title><![CDATA[node package - minimist & 命令行参数解析规则学习笔记]]></title>
+      <url>/2017/10/08/learn-minimist/</url>
+      <content type="html"><![CDATA[<h1 id="node-package-minimist-amp-命令行参数解析规则学习笔记"><a href="#node-package-minimist-amp-命令行参数解析规则学习笔记" class="headerlink" title="node package - minimist &amp; 命令行参数解析规则学习笔记"></a>node package - minimist &amp; 命令行参数解析规则学习笔记</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我希望使用 node 做一个 <strong>CLI (Command line interface)</strong> 工具, 因此必须解析命令行参数数组 <em>process.argv</em>.</p>
+<p><strong>第一种方案是,</strong> 对参数数组 process.argv 直接处理, 编写 swtich or if 语句块, 根据不同的参数做不同的处理.</p>
+<p><strong>第二种方案是,</strong> 写一个命令行参数解析 <strong>helper</strong>, 将 <em>process.argv</em> 解析成一个<strong>对象</strong>, 再进行下一步处理.</p>
+<p><strong>第一种方案,</strong> 在命令行参数足够复杂的时候, 会在工具读取参数的过程逻辑复杂化, 着实不可取的.</p>
+<p><strong>第二种方案,</strong> 则是一种通用的解决方案, 一次编写, 所有的命令行工具都可以使用.</p>
+<p>在使用第二种方案的时候, 我们的目的是将 process.argv 数组解析成一个对象,包含一个个键值对 key =&gt; value, 那么 <em>process.argv</em> 中哪些项是键, 哪些是 value, 就需要制订一种规则 - <strong>命令行的参数输入规则</strong>.通常使用约定成熟的 unix command line 规则.</p>
+<p>因此我找到了现成的 nodejs 环境下的<strong>命令行参数解析 engine</strong> - <a href="https://www.npmjs.com/package/minimist" title="npmjs - minimist" target="_blank" rel="external"><code>minimist</code></a></p>
+<h2 id="node-package-minimist"><a href="#node-package-minimist" class="headerlink" title="node package - minimist"></a>node package - minimist</h2><p>minimist 是 nodejs 下的一个命令行参数解析引擎, 功能就是将 process.argv 中的参数解析成一个对象.</p>
+<blockquote>
+<p>查阅<a href="https://www.npmjs.com/package/minimist" title="npmjs - minimist" target="_blank" rel="external">minimist 官方文档</a>更快获得支持.</p>
+</blockquote>
+<h3 id="基本用法如下"><a href="#基本用法如下" class="headerlink" title="基本用法如下:"></a>基本用法如下:</h3><pre><code class="javascript">#!/usr/bin/env node
+var argv = require(&#39;minimist&#39;)(process.argv.slice(2));
+console.dir(argv);
+</code></pre>
+<p>为什么输入参数是 <strong>process.argv.slice(2)</strong>?<br>我们在 shell 中输入的命令行如下</p>
+<pre><code class="bash">$ node cmd.js xxx sss xxx sss xxx
+</code></pre>
+<p><strong>process.argv[0]</strong> 是 <strong>shell 类型</strong>, 即 <strong>node</strong>. <strong>process.argv[1]</strong> 则是工具本身的路径.</p>
+<h3 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h3><pre><code class="javascript">#!/usr/bin/env node
+var argv = require(&#39;minimist&#39;)(process.argv.slice(2), opts={});
+console.dir(argv);
+</code></pre>
+<p>opts 的更多介绍, 就在文档中(也可以查看源码,毕竟就一个 index.js 文件), 最主要使用的 opts.default 属性, 定义默认的参数.</p>
+<h2 id="命令行参数规则总结"><a href="#命令行参数规则总结" class="headerlink" title="命令行参数规则总结"></a>命令行参数规则总结</h2><p>以下命令行参数是我在 <em>minimist</em> 的使用过程中总结出来的. 逐个解析 <em>process.argv</em> 的每一个 item</p>
+<ol>
+<li>item 不是 key, 将会被放入key 为 ‘_’ 的数组中<pre><code class="javascript">// $ node cmd.js arg1 arg2 arg3 arg4 arg5
+// &gt; { _: [ &#39;arg1&#39;, &#39;arg2&#39;, &#39;arg3&#39;, &#39;arg4&#39;, &#39;arg5&#39; ] }
+</code></pre>
+</li>
+<li>item 是 key(_+单个字符), item 会作为 key, nextItem(非 key) 会被作为 value, 扔进结果集<pre><code class="javascript">// $ node cmd.js -u root -p password password1 password2
+// &gt; { _: [ &#39;password1&#39;, &#39;password2&#39; ], u: &#39;root&#39;, p: &#39;password&#39; }
+</code></pre>
+<blockquote>
+<p>注: 单个字符包含字母, 数字, 其他特殊字符在不造成 shell 误解的情况也可以使用.但<code>(</code> , <code>)</code> , <code>&amp;</code> , <code>|</code> 亲测不行</p>
+</blockquote>
+</li>
+</ol>
+<p>如果 nextItem(是 key), 那么 item 会被作为 boolean 类型且值为 true 扔进结果集</p>
+<pre><code class="javascript">// $ node cmd.js -a -b testing
+// &gt; { _: [], a: true, b: &#39;testing&#39; }
+</code></pre>
+<p>还有一种特殊情况, _+多个字符会怎么样?</p>
+<pre><code class="javascript">// $ node cmd.js -u root -p password -abcd
+// &gt; { _: [],
+//          u: &#39;root&#39;,
+//          p: &#39;password&#39;,
+//          a: true,
+//          b: true,
+//          c: true,
+//          d: true 
+//      }
+</code></pre>
+<p>3.当 item 以 ‘–’(双横杠)开头的时候, item 将会被解析成一个对像(注意两种 boolean)</p>
+<pre><code class="javascript">// $ node cmd.js --ssl --no-cookie --user=root --password=asdf
+// &gt; { _: [], ssl: true, cookie: false, user: &#39;root&#39;, password: &#39;asdf&#39; }
+</code></pre>
+<h2 id="minimist-代码解读"><a href="#minimist-代码解读" class="headerlink" title="minimist - 代码解读"></a>minimist - 代码解读</h2><p>就一个 index.js 文件, 语法也不难懂.最主要的逻辑在于一个 for 循环.对于 opts 的处理逻辑也不复杂.重点在于, 看代码前先看文档, 知道 opts 的作用在读代码就轻松多了, 毕竟, 这代码也没啥注释.</p>
+<pre><code class="javascript">for (var i = 0; i &lt; args.length; i++) {
+    var arg = args[i];
+
+    if (/^--.+=/.test(arg)) {
+        ...
+    }
+    else if (/^--no-.+/.test(arg)) {
+        ...
+    }
+    else if (/^--.+/.test(arg)) {
+        ...
+    }
+    else if (/^-[^-]+/.test(arg)) {
+        ...
+    }
+    else {
+       ...
+    }
+}
+</code></pre>
+<h2 id="同类型工具"><a href="#同类型工具" class="headerlink" title="同类型工具"></a>同类型工具</h2><p>同是 nodejs 下的命令行参数解析引擎<a href="https://www.npmjs.com/package/optimist" title="npmjs - optimist" target="_blank" rel="external">optimist</a> ,读读 readme.md 吧, optimist的作者自己跑去用 minimist 了, 弃坑了…</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 学习笔记 </category>
+            
+            <category> node </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> node </tag>
+            
+            <tag> nodejs </tag>
+            
+            <tag> minimist </tag>
+            
+            <tag> 命令行参数解析 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PSP 篇]]></title>
       <url>/2017/10/08/my-psp-20171007/</url>
       <content type="html"><![CDATA[<p><img src="/img/post/psp-running.png" alt="psp 现在的样子" title="PSP 通电"></p>
