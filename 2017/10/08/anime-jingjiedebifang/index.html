@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+        国庆一刷&lt;境界的彼方&gt; | 
+        
+        Teeeemoji
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Teeeemoji">
+    <meta name="description" itemprop="description"
+          content=" 
+国庆的某一个深夜 B 站闲逛, 打开境界的彼方 TV 第一集, 发现弹幕都在刷 ‘恭喜你发现神作一枚’, 加上女主是我在微信上很喜欢的一款萝莉表情, 这番立刻吸引了我的目光. ">
+    <meta name="keywords"
+          content="  ,anime  ,境界的彼方  ,栗山未来 ">
+
+    <!-- Import lsloader -->
+    <script>(function () {
+            window.lsloader = {jsRunSequence: [], jsnamemap: {}, cssnamemap: {}};
+            lsloader.removeLS = function (key) {
+                try {
+                    localStorage.removeItem(key)
+                } catch (e) {
+                }
+            };
+            lsloader.setLS = function (key, val) {
+                try {
+                    localStorage.setItem(key, val)
+                } catch (e) {
+                }
+            };
+            lsloader.getLS = function (key) {
+                var val = "";
+                try {
+                    val = localStorage.getItem(key)
+                } catch (e) {
+                    val = ""
+                }
+                return val
+            };
+            versionString = "/*" + (window.materialVersion || "unknownVersion") + "*/";
+            lsloader.clean = function () {
+                try {
+                    var keys = [];
+                    for (var i = 0; i < localStorage.length; i++) {
+                        keys.push(localStorage.key(i))
+                    }
+                    keys.forEach(function (key) {
+                        var data = lsloader.getLS(key);
+                        if (window.oldVersion) {
+                            var remove = window.oldVersion.reduce(function (p, c) {
+                                return p || data.indexOf("/*" + c + "*/") !== -1
+                            }, false);
+                            if (remove) {
+                                lsloader.removeLS(key)
+                            }
+                        }
+                    })
+                } catch (e) {
+                }
+            };
+            lsloader.clean();
+            lsloader.load = function (jsname, jspath, cssonload, isJs) {
+                if (typeof cssonload === "boolean") {
+                    isJs = cssonload;
+                    cssonload = undefined
+                }
+                isJs = isJs || false;
+                cssonload = cssonload || function () {
+                    };
+                var code;
+                code = this.getLS(jsname);
+                if (code && code.indexOf(versionString) === -1) {
+                    this.removeLS(jsname);
+                    this.requestResource(jsname, jspath, cssonload, isJs);
+                    return
+                }
+                if (code) {
+                    var versionNumber = code.split(versionString)[0];
+                    if (versionNumber != jspath) {
+                        console.log("reload:" + jspath);
+                        this.removeLS(jsname);
+                        this.requestResource(jsname, jspath, cssonload, isJs);
+                        return
+                    }
+                    code = code.split(versionString)[1];
+                    if (isJs) {
+                        this.jsRunSequence.push({name: jsname, code: code});
+                        this.runjs(jspath, jsname, code)
+                    } else {
+                        document.getElementById(jsname).appendChild(document.createTextNode(code));
+                        cssonload()
+                    }
+                } else {
+                    this.requestResource(jsname, jspath, cssonload, isJs)
+                }
+            };
+            lsloader.requestResource = function (name, path, cssonload, isJs) {
+                var that = this;
+                if (isJs) {
+                    this.iojs(path, name, function (path, name, code) {
+                        that.setLS(name, path + versionString + code);
+                        that.runjs(path, name, code)
+                    })
+                } else {
+                    this.iocss(path, name, function (code) {
+                        document.getElementById(name).appendChild(document.createTextNode(code));
+                        that.setLS(name, path + versionString + code)
+                    }, cssonload)
+                }
+            };
+            lsloader.iojs = function (path, jsname, callback) {
+                var that = this;
+                that.jsRunSequence.push({name: jsname, code: ""});
+                try {
+                    var xhr = new XMLHttpRequest;
+                    xhr.open("get", path, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                                if (xhr.response != "") {
+                                    callback(path, jsname, xhr.response);
+                                    return
+                                }
+                            }
+                            that.jsfallback(path, jsname)
+                        }
+                    };
+                    xhr.send(null)
+                } catch (e) {
+                    that.jsfallback(path, jsname)
+                }
+            };
+            lsloader.iocss = function (path, jsname, callback, cssonload) {
+                var that = this;
+                try {
+                    var xhr = new XMLHttpRequest;
+                    xhr.open("get", path, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                                if (xhr.response != "") {
+                                    callback(xhr.response);
+                                    cssonload();
+                                    return
+                                }
+                            }
+                            that.cssfallback(path, jsname, cssonload)
+                        }
+                    };
+                    xhr.send(null)
+                } catch (e) {
+                    that.cssfallback(path, jsname, cssonload)
+                }
+            };
+            lsloader.iofonts = function (path, jsname, callback, cssonload) {
+                var that = this;
+                try {
+                    var xhr = new XMLHttpRequest;
+                    xhr.open("get", path, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                                if (xhr.response != "") {
+                                    callback(xhr.response);
+                                    cssonload();
+                                    return
+                                }
+                            }
+                            that.cssfallback(path, jsname, cssonload)
+                        }
+                    };
+                    xhr.send(null)
+                } catch (e) {
+                    that.cssfallback(path, jsname, cssonload)
+                }
+            };
+            lsloader.runjs = function (path, name, code) {
+                if (!!name && !!code) {
+                    for (var k in this.jsRunSequence) {
+                        if (this.jsRunSequence[k].name == name) {
+                            this.jsRunSequence[k].code = code
+                        }
+                    }
+                }
+                if (!!this.jsRunSequence[0] && !!this.jsRunSequence[0].code && this.jsRunSequence[0].status != "failed") {
+                    var script = document.createElement("script");
+                    script.appendChild(document.createTextNode(this.jsRunSequence[0].code));
+                    script.type = "text/javascript";
+                    document.getElementsByTagName("head")[0].appendChild(script);
+                    this.jsRunSequence.shift();
+                    if (this.jsRunSequence.length > 0) {
+                        this.runjs()
+                    }
+                } else if (!!this.jsRunSequence[0] && this.jsRunSequence[0].status == "failed") {
+                    var that = this;
+                    var script = document.createElement("script");
+                    script.src = this.jsRunSequence[0].path;
+                    script.type = "text/javascript";
+                    this.jsRunSequence[0].status = "loading";
+                    script.onload = function () {
+                        that.jsRunSequence.shift();
+                        if (that.jsRunSequence.length > 0) {
+                            that.runjs()
+                        }
+                    };
+                    document.body.appendChild(script)
+                }
+            };
+            lsloader.tagLoad = function (path, name) {
+                this.jsRunSequence.push({name: name, code: "", path: path, status: "failed"});
+                this.runjs()
+            };
+            lsloader.jsfallback = function (path, name) {
+                if (!!this.jsnamemap[name]) {
+                    return
+                } else {
+                    this.jsnamemap[name] = name
+                }
+                for (var k in this.jsRunSequence) {
+                    if (this.jsRunSequence[k].name == name) {
+                        this.jsRunSequence[k].code = "";
+                        this.jsRunSequence[k].status = "failed";
+                        this.jsRunSequence[k].path = path
+                    }
+                }
+                this.runjs()
+            };
+            lsloader.cssfallback = function (path, name, cssonload) {
+                if (!!this.cssnamemap[name]) {
+                    return
+                } else {
+                    this.cssnamemap[name] = 1
+                }
+                var link = document.createElement("link");
+                link.type = "text/css";
+                link.href = path;
+                link.rel = "stylesheet";
+                link.onload = link.onerror = cssonload;
+                var root = document.getElementsByTagName("script")[0];
+                root.parentNode.insertBefore(link, root)
+            };
+            lsloader.runInlineScript = function (scriptId, codeId) {
+                var code = document.getElementById(codeId).innerText;
+                this.jsRunSequence.push({name: scriptId, code: code}
+                );
+                this.runjs()
+            };
+            lsloader.loadCombo = function (jslist) {
+                var updateList = "";
+                var requestingModules = {};
+                for (var k in jslist) {
+                    var LS = this.getLS(jslist[k].name);
+                    if (!!LS) {
+                        var version = LS.split(versionString)[0];
+                        var code = LS.split(versionString)[1]
+                    } else {
+                        var version = ""
+                    }
+                    if (version == jslist[k].path) {
+                        this.jsRunSequence.push({name: jslist[k].name, code: code, path: jslist[k].path})
+                    } else {
+                        this.jsRunSequence.push({
+                            name: jslist[k].name,
+                            code: null,
+                            path: jslist[k].path,
+                            status: "comboloading"
+                        });
+                        requestingModules[jslist[k].name] = true;
+                        updateList += (updateList == "" ? "" : ";") + jslist[k].path
+                    }
+                }
+                var that = this;
+                if (!!updateList) {
+                    var xhr = new XMLHttpRequest;
+                    xhr.open("get", combo + updateList, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                                if (xhr.response != "") {
+                                    that.runCombo(xhr.response, requestingModules);
+                                    return
+                                }
+                            } else {
+                                for (var i in that.jsRunSequence) {
+                                    if (requestingModules[that.jsRunSequence[i].name]) {
+                                        that.jsRunSequence[i].status = "failed"
+                                    }
+                                }
+                                that.runjs()
+                            }
+                        }
+                    };
+                    xhr.send(null)
+                }
+                this.runjs()
+            };
+            lsloader.runCombo = function (comboCode, requestingModules) {
+                comboCode = comboCode.split("/*combojs*/");
+                comboCode.shift();
+                for (var k in this.jsRunSequence) {
+                    if (!!requestingModules[this.jsRunSequence[k].name] && !!comboCode[0]) {
+                        this.jsRunSequence[k].status = "comboJS";
+                        this.jsRunSequence[k].code = comboCode[0];
+                        this.setLS(this.jsRunSequence[k].name, this.jsRunSequence[k].path + versionString + comboCode[0]);
+                        comboCode.shift()
+                    }
+                }
+                this.runjs()
+            }
+        })();</script>
+
+    <!-- Import queue -->
+    <script>function Queue() {
+            this.dataStore = [];
+            this.offer = b;
+            this.poll = d;
+            this.execNext = a;
+            this.debug = false;
+            this.startDebug = c;
+            function b(e) {
+                if (this.debug) {
+                    console.log("Offered a Queued Function.")
+                }
+                if (typeof e === "function") {
+                    this.dataStore.push(e)
+                } else {
+                    console.log("You must offer a function.")
+                }
+            }
+
+            function d() {
+                if (this.debug) {
+                    console.log("Polled a Queued Function.")
+                }
+                return this.dataStore.shift()
+            }
+
+            function a() {
+                var e = this.poll();
+                if (e !== undefined) {
+                    if (this.debug) {
+                        console.log("Run a Queued Function.")
+                    }
+                    e()
+                }
+            }
+
+            function c() {
+                this.debug = true
+            }
+        }
+        var queue = new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Teeeemoji">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+    
+    <link rel=alternate type="application/atom+xml" href="atom.xml">
+    
+    
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/css/ie-blocker.css">
+
+    
+    <script src="/js/ie-blocker.zhCN.js"></script>
+    
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+    <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+    
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #1D4E69 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #1D4E69 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #1D4E69 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/background.png);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+    <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://teeeemoji.xyz">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content=" 国庆一刷&lt;境界的彼方&gt; |  Teeeemoji">
+    <meta property="og:image" content="http://teeeemoji.xyz/img/favicon.png"/>
+    <meta property="og:description"
+          content=" 
+国庆的某一个深夜 B 站闲逛, 打开境界的彼方 TV 第一集, 发现弹幕都在刷 ‘恭喜你发现神作一枚’, 加上女主是我在微信上很喜欢的一款萝莉表情, 这番立刻吸引了我的目光. ">
+    
+    <meta property="og:article:tag" content="anime">
+    
+    <meta property="og:article:tag" content="境界的彼方">
+    
+    <meta property="og:article:tag" content="栗山未来">
+    
+
+    
+    <meta property="article:published_time" content="Sun Oct 08 2017 23:13:43 GMT+0800"/>
+    <meta property="article:modified_time" content="Sun Oct 08 2017 23:14:39 GMT+0800"/>
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content=" 国庆一刷&lt;境界的彼方&gt; |  Teeeemoji">
+    <meta name="twitter:description"
+          content=" 
+国庆的某一个深夜 B 站闲逛, 打开境界的彼方 TV 第一集, 发现弹幕都在刷 ‘恭喜你发现神作一枚’, 加上女主是我在微信上很喜欢的一款萝莉表情, 这番立刻吸引了我的目光. ">
+    <meta name="twitter:image" content="http://teeeemoji.xyz/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="http://teeeemoji.xyz"/>
+
+    <!-- Add canonical link for SEO -->
+    
+    <link rel="canonical" href="http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/index.html"/>
+    
+
+    <!-- Structured-data for SEO -->
+    
+    
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/index.html",
+    "headline": "国庆一刷<境界的彼方>",
+    "datePublished": "Sun Oct 08 2017 23:13:43 GMT+0800",
+    "dateModified": "Sun Oct 08 2017 23:14:39 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Teeeemoji",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "只是一个人,因为很想你,,日事清,不贰过"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Teeeemoji",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",anime,境界的彼方,栗山未来",
+    "description": "
+国庆的某一个深夜 B 站闲逛, 打开境界的彼方 TV 第一集, 发现弹幕都在刷 ‘恭喜你发现神作一枚’, 加上女主是我在微信上很喜欢的一款萝莉表情, 这番立刻吸引了我的目光.",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-107745524-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?509d90a4255b7b30ec9e4b444220889a';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+    <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1264602602&web_id=1264602602" language="JavaScript"></script>
+</div>
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle"><span class="MD-burger-layer"></span></button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#“前辈-我看起来像个正常人吗-”"><span class="post-toc-number">1.</span> <span class="post-toc-text">“前辈, 我看起来像个正常人吗?”</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#“未来-你看我像正常人吗-”"><span class="post-toc-number">2.</span> <span class="post-toc-text">“未来, 你看我像正常人吗?”</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#针对-秋人-的阴谋"><span class="post-toc-number">3.</span> <span class="post-toc-text">针对 秋人 的阴谋</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#他们两个人的心意"><span class="post-toc-number">4.</span> <span class="post-toc-text">他们两个人的心意</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些记忆深刻的剧情"><span class="post-toc-number">5.</span> <span class="post-toc-text">一些记忆深刻的剧情</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最后问一句"><span class="post-toc-number">6.</span> <span class="post-toc-text">最后问一句</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他的剧评"><span class="post-toc-number">7.</span> <span class="post-toc-text">其他的剧评</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/post/jingjiedebifang-tiaowu.png)">
+    
+            <p class="article-headline-p">
+                国庆一刷<境界的彼方>
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Teeeemoji</strong>
+        <span>10月 08, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/anime/">anime</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/境界的彼方/">境界的彼方</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/栗山未来/">栗山未来</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=国庆一刷&lt;境界的彼方&gt;&url=http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/index.html&pic=http://teeeemoji.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=国庆一刷&lt;境界的彼方&gt;&url=http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/index.html&via=Teeeemoji" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><img src="/img/post/jingjiedebifang-1.jpg" alt="jingjiedebifang-1"></p>
+<p>国庆的某一个深夜 B 站闲逛, 打开境界的彼方 TV 第一集, 发现弹幕都在刷 <strong>‘恭喜你发现神作一枚’</strong>, 加上女主是我在微信上很喜欢的一款萝莉表情, 这番立刻吸引了我的目光.</p>
+<a id="more"></a>
+<p>(境界的彼方 微信表情 很可爱吧)</p>
+<p><img src="/img/post/weixinbiaoqing-jingjiedebifang.jpg" alt="境界的彼方微信表情"></p>
+<p>12集长的 TV 版故事节奏把握的非常好, 剧情渐进式, 前期 <em>未来</em> 呆萌惹人怜爱, 让人期望听到 <em>未来</em> 的(悲惨)故事, 在击败 <em>虚空之影</em> 的小高潮后, 马上抛出一整集的福利 - 第六集 - 看得心跳激动并且 <a href="https://bangumi.bilibili.com/anime/3366/play#104935 BiliBili 直链" target="_blank" rel="external">歌舞特典</a> 值得一生收藏哟, 且不是俗套的<a href="https://zhuanlan.zhihu.com/p/29674081 走近科学:动画泳装回的兴奋度研究" target="_blank" rel="external">泳装回</a>哟. 果不其然, 福利过后马上开虐, 一场针对男女主角身世血脉的大阴谋逐渐揭开, 剧情有悬疑有逆转, 不断抛出泪点和惊喜, 直到结局让人不得不给编剧寄刀片的时候, 突如其来地抛出一个<strong>意料之外</strong>的<strong>不合情理</strong>的结局, 竟然让我心满意足的给这部番剧打了个90分.</p>
+<h2 id="“前辈-我看起来像个正常人吗-”"><a href="#“前辈-我看起来像个正常人吗-”" class="headerlink" title="“前辈, 我看起来像个正常人吗?”"></a>“前辈, 我看起来像个正常人吗?”</h2><p><em>未来</em> 纠结的是自己收到诅咒的血脉, 受到世界的排挤, 给亲人(小姐姐<em>唯</em>)造成伤害, 因此带有深深自责并且开始怀疑生存的意义, 发出”像我这样的人, 为什么会被生出来”之类的疑问.</p>
+<p>当她开始向 <em>秋人</em> 袒露心声时, 她向 <em>秋人</em> 发出这样疑问 - <code>前辈, 我看起来像个正常人吗?</code>, 在我看来已经是在向 <em>秋人</em> 撒娇了.</p>
+<p>好在我们的绅(hen)士(tai) <em>秋人</em> 早已喜欢上 <em>未来</em>, 他的回答充满了宠溺 - <code>在我看来, 你只是一个带着眼睛的美少女</code>, <em>未来</em> 听到后也是一脸满(傲)足(娇) - <code>不愉快的说</code>.</p>
+<p>么么哒, 你们这波狗粮</p>
+<p>因为身世的问题而厌恶自己, 很正常的设定, 编剧这波破的还不错.</p>
+<h2 id="“未来-你看我像正常人吗-”"><a href="#“未来-你看我像正常人吗-”" class="headerlink" title="“未来, 你看我像正常人吗?”"></a>“未来, 你看我像正常人吗?”</h2><p>在击败 <em>虚空之影</em> 的时候, <em>秋人</em> 体内的 <em>境界的彼方</em> 暴走, 炸裂输出, 伤害了朋友破坏了森林.</p>
+<p>本人醒来以后也是一脸懵逼(但是听说之前也有这种情况, 还把 <em>博臣</em> 的背部击伤), 醒来后和 <em>未来</em> 两人单独吃饭, 低沉落寞地问 <em>未来</em> - <code>我看上去像个普(正)通(常)人吗?</code>.</p>
+<p><em>未来</em> 被光速打脸, 比惨大赛 <em>未来</em> 着实比不过 <em>秋人</em> 233.</p>
+<p>然而 <em>未来</em> 表情发生微妙变化后, 马上微笑着回答秋人 - <code>在我看来, 你只是一个喜欢眼睛美少女的变态学长</code>.</p>
+<p>温馨的狗粮发一波, 你们这对快点出本子吧.</p>
+<p>本来以为身世的梗已经被 <em>未来</em> 玩过了, <em>秋人</em> 接着玩一波, 给我造成了难以磨灭的印象, 编剧你实在是高.</p>
+<h2 id="针对-秋人-的阴谋"><a href="#针对-秋人-的阴谋" class="headerlink" title="针对 秋人 的阴谋"></a>针对 <em>秋人</em> 的阴谋</h2><p>以下内容涉及严重剧透.</p>
+<p>比惨大赛优胜者 - <em>秋人</em>的体质是半妖, 一半是人, 另一半是随时可能造成世界毁灭的妖梦 <em>境界的彼方</em>.尽管 <em>秋人</em> 在人类状态下人畜无害, 知识一个略善良的普通高中生, 但他的存在是整个人类社会的风险, 他的存在也会使某些变态对他产生一些特别的想法(利用他毁灭世界).因此人类阵营会想方设法消灭 <em>秋人</em>.</p>
+<p>因此 <em>秋人</em> 和异界师 <em>美月</em> &amp; <em>博臣</em> 产生了超出同学的友谊, 和 <em>名濑</em> 家族保持良好关系只是表象, <em>名濑</em> 家族一直在谋求消灭 <em>境界的彼方</em> 的办法, 只是瞒着 <em>美月</em> 和 <em>博臣</em> 而已.</p>
+<p>而 <em>未来</em> 受诅咒的血脉是消灭 <em>境界的彼方</em> 的唯一办法, 她的使命感使得她血脉的力量被 <em>泉姐姐</em> 利用. 直到蛰伏期 <em>泉</em> 刻意压制 <em>秋人</em> 的人性, 引出 <em>境界的彼方</em>, 并且诱导 <em>未来</em> 以牺牲自己的方式换得 <em>秋人</em> 的存活 - 且作为一个普通人活下去.</p>
+<p><em>未来</em> 牺牲了自己, 换来一辈子在 <em>境界的彼方</em> 体内跟它战斗, 消磨 <em>境界的彼方</em> 的实力, 使它不足以威胁人类.</p>
+<p>然而 <em>藤真弥勒</em> 这个<strong>真~变态</strong>希望借 <em>境界的彼方</em> 之手毁灭世界, 他持续以 <strong>不可知之秘法</strong> 增 <em>境界的彼方</em> 的实力, <em>未来</em> 的战斗苦不堪言.</p>
+<p><em>秋人</em> 得知 <em>未来</em> 还活着, 在母亲和众人的帮助下, 进入了 <em>境界的彼方</em> 的体内, 企图救出 <em>未来</em>, 两人相互扶持,艰难战斗, 获得胜利的一刻, <em>未来</em> 破碎了.</p>
+<p><em>秋人</em> 体内的 <em>境界的彼方</em> 是 <em>未来</em> 用全身的血液换过来的, 换来 <em>未来</em> 与 <em>境界的彼方</em> 的共同生存, 然而 <em>秋人</em> 再次将 <em>境界的彼方</em> 夺回体内, <em>未来</em> 的存在也就失去了支撑. (mmp 为什么不是换来 <em>秋人 境界的彼方 未来</em> 三人的共生).崩溃的 <em>秋人</em> 开始了他浑浑噩噩的一生 (emoji).</p>
+<p><em>未来</em> 你活该, 你什么都不懂, 现在什么都没有改变, 然而你却挂了.</p>
+<p>P.S. 我要是 <em>未来</em> 知道真相后真想砍死 <em>泉</em>.</p>
+<h2 id="他们两个人的心意"><a href="#他们两个人的心意" class="headerlink" title="他们两个人的心意"></a>他们两个人的心意</h2><p>也许 <em>秋人</em> 只有 0.1% 的风险会毁灭世界, 人类也不可能与他和平共处. 因此 <em>未来</em> 必然要想出一个消灭 <em>境界的彼方</em> 的办法, 她笨拙得希望以自己的牺牲换来 <em>秋人</em> 的幸福.</p>
+<p><em>秋人</em> 喜欢 <em>未来</em>, 希望保护 <em>未来</em>, 拯救 <em>未来</em>.得知这个傻姑娘舍身救己, 又气愤又感动, 并且的值 <em>未来</em> 的下落毫不犹豫就过去救她.<em>秋人</em> 在失去 <em>未来</em> 的时候, 则是过着浑浑噩噩的日子.在未来篇 <em>秋人</em> 是这样向 <em>未来</em> 表白的 - <code>我活着不是因为我的不是之身, 而是因为有你</code>.</p>
+<p>他们两人相互依靠, 互为生存意义.</p>
+<h2 id="一些记忆深刻的剧情"><a href="#一些记忆深刻的剧情" class="headerlink" title="一些记忆深刻的剧情"></a>一些记忆深刻的剧情</h2><p>想你的腋, 一腋知秋, 腋来香: 233 剧中反复出现的梗, 配合弹幕使用笑料加倍</p>
+<p>未来篇 <em>泉</em> 为什么会自愿植入妖梦: 估计是看到弟弟 <em>博臣</em> 被 妖梦化的 <em>秋人</em> 打伤, 渴望获得力量保护亲人吧. 因此 <em>泉</em> 才会迫切渴望消灭 <em>境界的彼方</em>.</p>
+<p><em>秋人</em> 你爹呢: 这部番的第二个名字一定叫 <code>未闻爹名</code> 233.无论是 TV , 过去篇, 未来篇都没有出现过秋人父亲的消息, 秋人他妈妈也是个细思极恐的角色.</p>
+<p><em>秋人</em> 与照相馆: 他们对于可爱的 <em>未来</em> 的写真的 PY 交易, 慢慢的笑料.</p>
+<p><em>秋人</em> 的记事本: 秋人加堆满的写真本并且认真写上评论及打分, 满满的笑料, 包括 <em>未来</em> 在写真馆的打工, 可想而知 <em>秋人</em> 真的是一个喜欢 <em>未来</em> 到无可救药的 绅(hen)士(tai).</p>
+<p>没头脑和不高兴: <em>未来</em> 的口头禅 <strong>不高兴的说</strong>, 有些时候显得僵硬的蹭的累桥段, 有些时候真的很棒.</p>
+<p>妹控 <em>博臣</em>: 妹控的笑料很多, 最最最细节的一个笑料自己去找图 - <em>秋人</em> 梦里看到 <em>美月</em> 太阳镜+泳装的时候, <em>博臣</em> 在旁边用潜望镜偷看. 细节就是 - <em>博臣</em> 偷看到脸都晒黑了, 就剩看潜望镜的眼眶还是白的 233,666.</p>
+<h2 id="最后问一句"><a href="#最后问一句" class="headerlink" title="最后问一句"></a>最后问一句</h2><p>半年不到, 你会深爱一个人到, 愿意付出生命也希望 TA 获得幸福, 的程度吗?</p>
+<hr>
+<h2 id="其他的剧评"><a href="#其他的剧评" class="headerlink" title="其他的剧评"></a>其他的剧评</h2><p><a href="https://www.zhihu.com/question/22204928" target="_blank" rel="external">知乎: 如何评价&lt;境界的彼方&gt;这部动画?</a></p>
+<p><a href="https://zhihu.com/question/22204928/answer/26950922" target="_blank" rel="external">其中的一个长评</a></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/">http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTIxNi83NzY1">
+	<script type="text/ls-javascript" id="livere-discuss-script">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/10/08/learn-minimist/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar-header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Teeeemoji's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        teeeemoji@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: teeeeemoji@163.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">5</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/学习笔记/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/学习笔记/node/">node<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/日常/">日常<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/日常/anime/">anime<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/日常/物件/">物件<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/gallery" title="图集">
+                
+                    <i class="material-icons sidebar-material-icons">photo</i>
+                
+                图集
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/links" title="友情链接">
+                
+                友情链接
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">5</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/u/6092439663/home" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/teeeemoji" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Teeeemoji
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
