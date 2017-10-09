@@ -6,6 +6,7 @@
       <title><![CDATA[写博客的最佳方式]]></title>
       <url>/2017/10/09/write-blog/</url>
       <content type="html"><![CDATA[<h1 id="写博客的最佳方式"><a href="#写博客的最佳方式" class="headerlink" title="写博客的最佳方式"></a>写博客的最佳方式</h1><p>国庆节把自己的博客开起来了, <a href="https://teeeemoji.github.io" target="_blank" rel="external">teeemoji 的博客</a>, 我的关注点已经从如何美化博客转移到, 如何更舒适地书写文章, 更可靠地保存文章以及如何更方便地发布文章.</p>
+<a id="more"></a>
 <h1 id="文章源文件的存储"><a href="#文章源文件的存储" class="headerlink" title="文章源文件的存储"></a>文章源文件的存储</h1><p>文章(最终的 md 文件) &amp; 相关笔记, 均保存在 <strong>wiz</strong> 笔记中.使用 wiz 笔记, 一边学习一遍做笔记, 最后在 wiz 中编写文章, 然后发布到 hexo 博客中.</p>
 <blockquote>
 <p>一篇文章从想法诞生, 到编写过程, 最后发布出去, 这个过程所产生的内容远远不止能看到的这篇文章. 还有很多相关的笔记, 材料, 图片, 都是学习过程的产出和编写文章的副产品.这些相关内容提供文章的内容, 是文章的论据和支撑, 以及提供文章的拓展内容和后续更新方向. 因此一篇文章极其相关笔记应该妥善保管在一起.</p>
