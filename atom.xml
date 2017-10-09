@@ -6,11 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-<<<<<<< HEAD
-  <updated>2017-10-08T15:14:39.000Z</updated>
-=======
   <updated>2017-10-09T14:12:00.000Z</updated>
->>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -21,8 +17,6 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-<<<<<<< HEAD
-=======
     <title>写博客的最佳方式</title>
     <link href="http://teeeemoji.xyz/2017/10/09/write-blog/"/>
     <id>http://teeeemoji.xyz/2017/10/09/write-blog/</id>
@@ -57,7 +51,6 @@
   </entry>
   
   <entry>
->>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
     <title>国庆一刷&lt;境界的彼方&gt;</title>
     <link href="http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/"/>
     <id>http://teeeemoji.xyz/2017/10/08/anime-jingjiedebifang/</id>
@@ -159,17 +152,10 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-<<<<<<< HEAD
-      <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
-=======
       <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
->>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
   </entry>
   
   <entry>
@@ -189,20 +175,12 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-<<<<<<< HEAD
-=======
       <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
->>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://teeeemoji.xyz/tags/hexo/"/>
     
-<<<<<<< HEAD
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
-=======
->>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
   </entry>
   
 </feed>
