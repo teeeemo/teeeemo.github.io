@@ -3,6 +3,85 @@
   
     
     <entry>
+<<<<<<< HEAD
+=======
+      <title><![CDATA[写博客的最佳方式]]></title>
+      <url>/2017/10/09/write-blog/</url>
+      <content type="html"><![CDATA[<h1 id="写博客的最佳方式"><a href="#写博客的最佳方式" class="headerlink" title="写博客的最佳方式"></a>写博客的最佳方式</h1><p>国庆节把自己的博客开起来了, <a href="https://teeeemoji.github.io" target="_blank" rel="external">teeemoji 的博客</a>, 我的关注点已经从如何美化博客转移到, 如何更舒适地书写文章, 更可靠地保存文章以及如何更方便地发布文章.</p>
+<h1 id="文章源文件的存储"><a href="#文章源文件的存储" class="headerlink" title="文章源文件的存储"></a>文章源文件的存储</h1><p>文章(最终的 md 文件) &amp; 相关笔记, 均保存在 <strong>wiz</strong> 笔记中.使用 wiz 笔记, 一边学习一遍做笔记, 最后在 wiz 中编写文章, 然后发布到 hexo 博客中.</p>
+<blockquote>
+<p>一篇文章从想法诞生, 到编写过程, 最后发布出去, 这个过程所产生的内容远远不止能看到的这篇文章. 还有很多相关的笔记, 材料, 图片, 都是学习过程的产出和编写文章的副产品.这些相关内容提供文章的内容, 是文章的论据和支撑, 以及提供文章的拓展内容和后续更新方向. 因此一篇文章极其相关笔记应该妥善保管在一起.</p>
+</blockquote>
+<p>wiz 笔记功能完备, 容量足. 虽然不是最好用的, 但是由于使用习惯问题, 我一直在使用.</p>
+<h1 id="文章相关图片的存储"><a href="#文章相关图片的存储" class="headerlink" title="文章相关图片的存储"></a>文章相关图片的存储</h1><p>使用七牛云存储服务实现图床功能.并且使用七牛的 qshell 脚本工具同步图床.</p>
+<blockquote>
+<p>文章所使用的图片随着文章内容增加占用的空间会非常大, 回非常快速地将我的 github 空间撑爆, 因此必须使用图床工具 or 使用云存储服务实现图床功能.</p>
+</blockquote>
+<ul>
+<li><p>很不幸的是保存在 wiz 笔记中的图片, 外链不可访问</p>
+</li>
+<li><p>有道云笔记中保存的图片, 可以外链访问呢, 然而作为图床使用仍然是不方便的, 主要在图片的同步, 以及编写文章时插入图片的步骤过于繁琐.</p>
+</li>
+<li><p>同理使用微博实现图床功能也是不科学的, 步骤太繁琐了</p>
+</li>
+<li><p>loli.net/sm.ms 匿名图床, 直接上传图片生成外链, 编写文章插入图片的过程变得非常优雅了. 问题在于原始图片数据变得不可管理.</p>
+</li>
+<li><p>使用七牛云存储免费10G 空间10G 流量, 并且使用 qshell 作为同步工具, 比之 sm.ms 图床更加优雅舒适.</p>
+</li>
+</ul>
+<p>使用步骤简述:</p>
+<ol>
+<li><p>注册七牛, 并实名, 获得10G 免费空间和流量;</p>
+</li>
+<li><p>创建对象存储空间(bucket);</p>
+</li>
+<li><p>下载 qshell 工具, 根据文档尝试使用;</p>
+</li>
+</ol>
+<p><strong>注:</strong> qshell 工具只需要使用到 qupload 命令, qdownload 命令(此命令要钱!?)不需要使用;</p>
+<p><strong>注:</strong> 同步图床的命令可以做成 alias: qnu</p>
+<h1 id="最终编写文章的步骤"><a href="#最终编写文章的步骤" class="headerlink" title="最终编写文章的步骤"></a>最终编写文章的步骤</h1><p>最终,编写文章,插入图片,到发布的步骤变成如下:</p>
+<ol>
+<li><p>wiz note 建立文章开始编写;</p>
+</li>
+<li><p>本地 图库加入图片, 并在 wiz note 中写入图片链接(七牛提供的默认域名/图片在图库的路径+图片名)</p>
+</li>
+<li><p>hexo new post xxx</p>
+</li>
+<li><p>修改 post 的 thumbnail 以及格式美化</p>
+</li>
+<li><p>bash 命令 <code>$ qns</code> 一键同步图床</p>
+</li>
+<li><p>bash 命令 <code>$ hexo deploy</code> 一键发布博客</p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+            <category> 写作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> 写博客 </tag>
+            
+            <tag> 七牛云 </tag>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+>>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
       <title><![CDATA[国庆一刷<境界的彼方>]]></title>
       <url>/2017/10/08/anime-jingjiedebifang/</url>
       <content type="html"><![CDATA[<p><img src="/img/post/jingjiedebifang-1.jpg" alt="jingjiedebifang-1"></p>
@@ -257,10 +336,17 @@ console.dir(argv);
         
         <tags>
             
+<<<<<<< HEAD
             <tag> 搭建博客 </tag>
             
             <tag> testing </tag>
             
+=======
+            <tag> testing </tag>
+            
+            <tag> 搭建博客 </tag>
+            
+>>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
         </tags>
         
     </entry>
@@ -296,12 +382,20 @@ alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="
         
         <tags>
             
+<<<<<<< HEAD
+=======
+            <tag> testing </tag>
+            
+>>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
             <tag> 搭建博客 </tag>
             
             <tag> hexo </tag>
             
+<<<<<<< HEAD
             <tag> testing </tag>
             
+=======
+>>>>>>> 11c7d61f77a2de6a2e545fb3956c3bf643d7da92
         </tags>
         
     </entry>
