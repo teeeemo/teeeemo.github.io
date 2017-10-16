@@ -3,6 +3,83 @@
   
     
     <entry>
+      <title><![CDATA[使用 alfred wrokflow 更舒服地写 blog]]></title>
+      <url>/2017/10/16/qiniu-upload/</url>
+      <content type="html"><![CDATA[<p>#使用 alfred wrokflow 更舒服地写 blog</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>之前提到过如何更舒服地编写 blog, 已经大大简化了上传图片的步骤.</p>
+<p>然而, 我又发现了更加简便的方法.实际使用中的体验达到小高潮.那就是用 <strong>alfred workflow</strong>, 完成粘贴即上传的操作.</p>
+<p><strong>注意:</strong> 此方法仅适用于 macbook, window 用户应该有同类方法.</p>
+<h3 id="实际操作步骤"><a href="#实际操作步骤" class="headerlink" title="实际操作步骤"></a>实际操作步骤</h3><ol>
+<li><p>拷贝本地图片;</p>
+</li>
+<li><p>在文章中粘贴;(粘贴触发将图片上传至七牛云的动作, 并自动生成图片外链)</p>
+</li>
+</ol>
+<p><img src="http://ox32k19xb.bkt.clouddn.com/2017/1508147061635.gif" alt="七牛上传"></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>第一步,安装并了解<strong>alfred workflow</strong>.</p>
+<p>在 <a href="http://xclient.info" target="_blank" rel="external">xclient</a> 获取<em>dao版</em> <strong>alfred workflow</strong>.</p>
+<p>稍微了解一下就知道使用<strong>alfred workflow</strong>的人们是如何推崇这个工具的.感兴趣可以多多尝试别人分享的<strong>workflow</strong></p>
+<p> 第二步,找到 <strong>alfred workflow</strong> 的资源分享站:</p>
+<blockquote>
+<p>国内介绍网站, 包含一些资源链接: <a href="https://www.waerfa.com/alfred-course-workflow/3" target="_blank" rel="external">https://www.waerfa.com/alfred-course-workflow/3</a></p>
+<p>国外 alfred workflow 分享网站: <a href="https://www.alfredforum.com/forum/3-share-your-workflows/?prune_day=100&amp;sort_by=Z-A&amp;sort_key=last_post&amp;topicfilter=all&amp;page=2" target="_blank" rel="external">https://www.alfredforum.com/forum/3-share-your-workflows/?prune_day=100&amp;sort_by=Z-A&amp;sort_key=last_post&amp;topicfilter=all&amp;page=2</a></p>
+<p>alfred 官方列举的 workflow 列表: <a href="http://www.alfredworkflow.com/" target="_blank" rel="external">http://www.alfredworkflow.com/</a></p>
+</blockquote>
+<p>第三步,尝试使用简单的<strong>workflow</strong></p>
+<p>我尝试使用了有道翻译, 然后发现我电脑里面的这个货可以被卸载了</p>
+<p><img src="http://ox32k19xb.bkt.clouddn.com/2017/1508146138428.png" alt="有道词典 App"></p>
+<p>使用方法: </p>
+<ol>
+<li><p>github 上下载<a href="https://github.com/wensonsmith/YoudaoTranslate" target="_blank" rel="external">workflow 有道翻译 zip 包</a>,并解压</p>
+</li>
+<li><p>将文件夹里面的 <em>xxx.workflow</em> 文件拖动到 <strong>alfred workflow</strong> 里面就可以啦.</p>
+</li>
+<li><p>有兴趣可以按照<a href="https://github.com/wensonsmith/YoudaoTranslate" target="_blank" rel="external">workflow 有道翻译  github</a> 上的 readme 自己尝试配置.</p>
+</li>
+</ol>
+<p>第四部, 开始尝试七牛云上传图片的<em>workflow</em></p>
+<p><a href="https://github.com/tiann/markdown-img-upload" target="_blank" rel="external">七牛云图床 workflow github</a>使用方法同上.</p>
+<p><strong>注意!注意!注意:</strong> 下面有几个关键点</p>
+<p>﻿1. 注意阅读 readme, 因为要配置七牛的账号;</p>
+<ol>
+<li>运行没有反应? 检查电脑的 python 环境!</li>
+</ol>
+<blockquote>
+<p>需要的配置: python 环境, 且安装了 requests 库</p>
+<ol>
+<li>安装 python 的包管理器 pip : <a href="https://www.zhihu.com/question/50470150?sort=created" target="_blank" rel="external">https://www.zhihu.com/question/50470150?sort=created</a></li>
+</ol>
+<p><code>$ sudo easy_install pip</code></p>
+<ol>
+<li>使用 pip 安装 requests 库</li>
+</ol>
+<p><code>$ sudo pip install requests</code></p>
+<p><strong>注意</strong>都要 sudo 权限, 毕竟使用的 mac 系统自带的 python.</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+            <category> mac使用 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 七牛云 </tag>
+            
+            <tag> blog </tag>
+            
+            <tag> alfred workflow </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[写博客的最佳方式]]></title>
       <url>/2017/10/09/write-blog/</url>
       <content type="html"><![CDATA[<h1 id="写博客的最佳方式"><a href="#写博客的最佳方式" class="headerlink" title="写博客的最佳方式"></a>写博客的最佳方式</h1><p>国庆节把自己的博客开起来了, <a href="https://teeeemoji.github.io" target="_blank" rel="external">teeemoji 的博客</a>, 我的关注点已经从如何美化博客转移到, 如何更舒适地书写文章, 更可靠地保存文章以及如何更方便地发布文章.</p>
@@ -67,11 +144,11 @@
         
         <tags>
             
+            <tag> 七牛云 </tag>
+            
             <tag> markdown </tag>
             
             <tag> 写博客 </tag>
-            
-            <tag> 七牛云 </tag>
             
             <tag> 图床 </tag>
             
@@ -334,9 +411,9 @@ console.dir(argv);
         
         <tags>
             
-            <tag> testing </tag>
-            
             <tag> 搭建博客 </tag>
+            
+            <tag> testing </tag>
             
         </tags>
         
@@ -373,11 +450,11 @@ alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="
         
         <tags>
             
-            <tag> testing </tag>
-            
             <tag> 搭建博客 </tag>
             
             <tag> hexo </tag>
+            
+            <tag> testing </tag>
             
         </tags>
         

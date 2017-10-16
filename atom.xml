@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-09T14:45:43.000Z</updated>
+  <updated>2017-10-16T09:47:36.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 alfred wrokflow 更舒服地写 blog</title>
+    <link href="http://teeeemoji.xyz/2017/10/16/qiniu-upload/"/>
+    <id>http://teeeemoji.xyz/2017/10/16/qiniu-upload/</id>
+    <published>2017-10-16T09:47:36.000Z</published>
+    <updated>2017-10-16T09:47:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#使用 alfred wrokflow 更舒服地写 blog&lt;/p&gt;
+&lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h2&gt;&lt;p&gt;之前提到过如何更舒服地编写 blog, 已经大大简化了上传图片的步骤.&lt;/p&gt;
+&lt;p&gt;然而, 我又发现了更加简便的方法.实际使用中的体验达到小高潮.那就是用
+        
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="mac使用" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/mac%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+    
+      <category term="blog" scheme="http://teeeemoji.xyz/tags/blog/"/>
+    
+      <category term="alfred workflow" scheme="http://teeeemoji.xyz/tags/alfred-workflow/"/>
+    
+  </entry>
   
   <entry>
     <title>写博客的最佳方式</title>
@@ -34,11 +68,11 @@
       <category term="写作" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/%E5%86%99%E4%BD%9C/"/>
     
     
+      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+    
       <category term="markdown" scheme="http://teeeemoji.xyz/tags/markdown/"/>
     
       <category term="写博客" scheme="http://teeeemoji.xyz/tags/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
     
       <category term="图床" scheme="http://teeeemoji.xyz/tags/%E5%9B%BE%E5%BA%8A/"/>
     
@@ -146,9 +180,9 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
@@ -169,11 +203,11 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://teeeemoji.xyz/tags/hexo/"/>
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
