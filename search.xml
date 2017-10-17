@@ -5,10 +5,9 @@
     <entry>
       <title><![CDATA[使用 alfred wrokflow 更舒服地写 blog]]></title>
       <url>/2017/10/16/qiniu-upload/</url>
-      <content type="html"><![CDATA[<p>#使用 alfred wrokflow 更舒服地写 blog</p>
-<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>之前提到过如何更舒服地编写 blog, 已经大大简化了上传图片的步骤.</p>
+      <content type="html"><![CDATA[<h1 id="使用-alfred-wrokflow-更舒服地写-blog"><a href="#使用-alfred-wrokflow-更舒服地写-blog" class="headerlink" title="使用 alfred wrokflow 更舒服地写 blog"></a>使用 alfred wrokflow 更舒服地写 blog</h1><h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>之前提到过如何更舒服地编写 blog, 已经大大简化了上传图片的步骤.</p>
 <p>然而, 我又发现了更加简便的方法.实际使用中的体验达到小高潮.那就是用 <strong>alfred workflow</strong>, 完成粘贴即上传的操作.</p>
-<p><strong>注意:</strong> 此方法仅适用于 macbook, window 用户应该有同类方法.</p>
+<p><strong>注意:</strong> 此方法<strong>仅适用于 macbook</strong>, window 用户应该有同类方法.</p>
 <h3 id="实际操作步骤"><a href="#实际操作步骤" class="headerlink" title="实际操作步骤"></a>实际操作步骤</h3><ol>
 <li><p>拷贝本地图片;</p>
 </li>
@@ -16,17 +15,14 @@
 </li>
 </ol>
 <p><img src="http://ox32k19xb.bkt.clouddn.com/2017/1508147061635.gif" alt="七牛上传"></p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>第一步,安装并了解<strong>alfred workflow</strong>.</p>
-<p>在 <a href="http://xclient.info" target="_blank" rel="external">xclient</a> 获取<em>dao版</em> <strong>alfred workflow</strong>.</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="第一步-安装并了解alfred-workflow"><a href="#第一步-安装并了解alfred-workflow" class="headerlink" title="第一步,安装并了解alfred workflow."></a>第一步,安装并了解<strong>alfred workflow</strong>.</h3><p>在 <a href="http://xclient.info" target="_blank" rel="external">xclient</a> 获取<em>dao版</em> <strong>alfred workflow</strong>.</p>
 <p>稍微了解一下就知道使用<strong>alfred workflow</strong>的人们是如何推崇这个工具的.感兴趣可以多多尝试别人分享的<strong>workflow</strong></p>
-<p> 第二步,找到 <strong>alfred workflow</strong> 的资源分享站:</p>
-<blockquote>
+<h3 id="第二步-找到-alfred-workflow-的资源分享站"><a href="#第二步-找到-alfred-workflow-的资源分享站" class="headerlink" title="第二步,找到 alfred workflow 的资源分享站:"></a>第二步,找到 <strong>alfred workflow</strong> 的资源分享站:</h3><blockquote>
 <p>国内介绍网站, 包含一些资源链接: <a href="https://www.waerfa.com/alfred-course-workflow/3" target="_blank" rel="external">https://www.waerfa.com/alfred-course-workflow/3</a></p>
 <p>国外 alfred workflow 分享网站: <a href="https://www.alfredforum.com/forum/3-share-your-workflows/?prune_day=100&amp;sort_by=Z-A&amp;sort_key=last_post&amp;topicfilter=all&amp;page=2" target="_blank" rel="external">https://www.alfredforum.com/forum/3-share-your-workflows/?prune_day=100&amp;sort_by=Z-A&amp;sort_key=last_post&amp;topicfilter=all&amp;page=2</a></p>
 <p>alfred 官方列举的 workflow 列表: <a href="http://www.alfredworkflow.com/" target="_blank" rel="external">http://www.alfredworkflow.com/</a></p>
 </blockquote>
-<p>第三步,尝试使用简单的<strong>workflow</strong></p>
-<p>我尝试使用了有道翻译, 然后发现我电脑里面的这个货可以被卸载了</p>
+<h3 id="第三步-尝试使用简单的workflow"><a href="#第三步-尝试使用简单的workflow" class="headerlink" title="第三步,尝试使用简单的workflow"></a>第三步,尝试使用简单的<strong>workflow</strong></h3><p>我尝试使用了有道翻译, 然后发现我电脑里面的这个货可以被卸载了</p>
 <p><img src="http://ox32k19xb.bkt.clouddn.com/2017/1508146138428.png" alt="有道词典 App"></p>
 <p>使用方法: </p>
 <ol>
@@ -37,8 +33,7 @@
 <li><p>有兴趣可以按照<a href="https://github.com/wensonsmith/YoudaoTranslate" target="_blank" rel="external">workflow 有道翻译  github</a> 上的 readme 自己尝试配置.</p>
 </li>
 </ol>
-<p>第四部, 开始尝试七牛云上传图片的<em>workflow</em></p>
-<p><a href="https://github.com/tiann/markdown-img-upload" target="_blank" rel="external">七牛云图床 workflow github</a>使用方法同上.</p>
+<h3 id="第四步-开始尝试七牛云上传图片的workflow"><a href="#第四步-开始尝试七牛云上传图片的workflow" class="headerlink" title="第四步, 开始尝试七牛云上传图片的workflow"></a>第四步, 开始尝试七牛云上传图片的<em>workflow</em></h3><p><a href="https://github.com/tiann/markdown-img-upload" target="_blank" rel="external">七牛云图床 workflow github</a>使用方法同上.</p>
 <p><strong>注意!注意!注意:</strong> 下面有几个关键点</p>
 <p>﻿1. 注意阅读 readme, 因为要配置七牛的账号;</p>
 <ol>
