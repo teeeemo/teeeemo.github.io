@@ -39,7 +39,7 @@
     
     <title>
         
-        links | 
+        draft 学习笔记 | 
         
         Teeeemoji
     </title>
@@ -53,7 +53,7 @@
     <meta name="description" itemprop="description"
           content=" A living single man. ">
     <meta name="keywords"
-          content=" ">
+          content="  ,react  ,富文本编辑器 ">
 
     <!-- Import lsloader -->
     <script>(function () {
@@ -566,16 +566,23 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://teeeemoji.xyz">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content=" links |  Teeeemoji">
+    <meta property="og:title" content=" draft 学习笔记 |  Teeeemoji">
     <meta property="og:image" content="http://teeeemoji.xyz/img/favicon.png"/>
     <meta property="og:description"
           content=" A living single man. ">
     
+    <meta property="og:article:tag" content="react">
+    
+    <meta property="og:article:tag" content="富文本编辑器">
+    
 
+    
+    <meta property="article:published_time" content="Tue Oct 17 2017 21:13:07 GMT+0800"/>
+    <meta property="article:modified_time" content="Tue Oct 17 2017 21:13:07 GMT+0800"/>
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content=" links |  Teeeemoji">
+    <meta name="twitter:title" content=" draft 学习笔记 |  Teeeemoji">
     <meta name="twitter:description"
           content=" A living single man. ">
     <meta name="twitter:image" content="http://teeeemoji.xyz/img/favicon.png">
@@ -584,13 +591,43 @@
 
     <!-- Add canonical link for SEO -->
     
-    <link rel="canonical" href="http://teeeemoji.xyz/links/index.html"/>
+    <link rel="canonical" href="http://teeeemoji.xyz/2017/10/17/learn-draft/index.html"/>
     
 
     <!-- Structured-data for SEO -->
     
     
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://teeeemoji.xyz/2017/10/17/learn-draft/index.html",
+    "headline": "draft 学习笔记",
+    "datePublished": "Tue Oct 17 2017 21:13:07 GMT+0800",
+    "dateModified": "Tue Oct 17 2017 21:13:07 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Teeeemoji",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "只是一个人,因为很想你,,日事清,不贰过"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Teeeemoji",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",react,富文本编辑器",
+    "description": "A living single man.",
+}
+</script>
 
 
     
@@ -645,125 +682,282 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#draft-学习笔记"><span class="post-toc-number">1.</span> <span class="post-toc-text">draft 学习笔记</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#背景"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本介绍"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">基本介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关资料"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">相关资料</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Single Links Page -->
-    <style>
-    .md-links {
-        min-height: calc(100% - 120px - 5pc - 6em);
-        text-align: center;
-        overflow: auto;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 320px;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (min-width: 680px) {
-        .md-links {
-            max-width: 640px;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    @media screen and (min-width: 1000px) {
-        .md-links {
-            max-width: 960px;
-        }
-    }
-
-    @media screen and (min-width: 1320px) {
-        .md-links {
-            max-width: 1280px;
-        }
-    }
-
-    @media screen and (min-width: 1640px) {
-        .md-links {
-            max-width: 1600px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .md-links {
-            min-height: calc(100% - 200px - 5pc - 6em);
-            margin-top: 6em;
-        }
-    }
-
-    .md-links-item {
-        background: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-        height: 72px;
-        line-height: 15px;
-        margin: 20px 10px;
-        padding: 0px 0px;
-        transition: box-shadow 0.25s;
-    }
-
-    .md-links a {
-        color: #333;
-        text-decoration: none;
-    }
-
-    .md-links li {
-        width: 300px;
-        float: left;
-        list-style: none;
-    }
-
-    .md-links-item img {
-        float: left;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .md-links-item:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .md-links-item a:hover{
-        cursor: pointer;
-    }
-
-    .md-links-title {
-        font-size: 20px;
-        line-height: 50px;
-    }
-
-    #scheme-Paradox .mdl-mini-footer{
-        clear: left;
-    }
-    #bottom{
-        position: relative;
-    }
-</style>
-
-<ul class="md-links">
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
-            <li class="md-links-item">
-                <a href="https://blog.viosey.com/" title="Viosey&#39;s Blog" target="_blank">
-                    <img src="https://cdn.viosey.com/img/avatar/blog_avatar.png" alt="Viosey&#39;s Blog" width="72px"/>
-                    <span class="md-links-title">Viosey&#39;s Blog</span><br />
-                    <span>深自缄默，如云漂泊</span>
-                </a>
-            </li>
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/galaxy/galaxy-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
         
+    
+            <p class="article-headline-p">
+                draft 学习笔记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Teeeemoji</strong>
+        <span>10月 17, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://teeeemoji.xyz/2017/10/17/learn-draft/">
     
 </ul>
 
-<script type="text/ls-javascript" id="page-links-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
-    $(document).ready(function() {
-        adjustFooter();
-    });
-</script>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/react/">react</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/富文本编辑器/">富文本编辑器</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=draft 学习笔记&url=http://teeeemoji.xyz/2017/10/17/learn-draft/index.html&pic=http://teeeemoji.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=draft 学习笔记&url=http://teeeemoji.xyz/2017/10/17/learn-draft/index.html&via=Teeeemoji" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://teeeemoji.xyz/2017/10/17/learn-draft/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://teeeemoji.xyz/2017/10/17/learn-draft/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="draft-学习笔记"><a href="#draft-学习笔记" class="headerlink" title="draft 学习笔记"></a>draft 学习笔记</h1><p>draft.js 是 facebook 的一个基于 react 的 <em>编辑器</em> 类库.它强于一般的 <em>编辑器</em>/<em>富文本编辑器</em> 插件或组件.</p>
+<ul>
+<li>draft.js 提供的数据结构&amp;工具方法, 可以非常快速方便得在 draft.js 上层构建一个功能完善的富文本编辑器.</li>
+</ul>
+<blockquote>
+<p>因此 draft.js 不是普通的<em>富文本编辑器</em>, 他是构成<strong>富文本编辑器</strong>的<strong>基础设施</strong></p>
+</blockquote>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>hcm 项目中需要使用到富文本编辑器, 用于编辑一个<em>邮件模板</em>.</p>
+<p><em>邮件模板</em>中就会存在<strong>变量</strong>, 通常是用特殊符号包裹起来的一小块, 如我做的项目中的 <code>${variable}</code> ,用 <code>${}</code>包裹起来.</p>
+<p>需求: 为了更清晰地看到整个模板中, <em>变量的位置</em>, <code>${}</code> 包裹起来的文本需要高亮显示.</p>
+<p>由于之前使用的富文本编辑器 froala-react-wysiwyg 不能完美兼容 react, 并且实现这个需求的过程存在不少坑:</p>
+<ul>
+<li>性能问题: 每次输入都要正则匹配全部的内容 (这里已经通过动作延迟, 优化了部分性能)</li>
+<li>undo/redo栈丢失: 正则匹配完, 并重新设置富文本编辑器内容, 会造成 undo/redo 栈丢失</li>
+<li>输入光标位置重置: 每次重置富文本编辑器内容, 都会丢失光标位置, 这一点是硬伤无法解决</li>
+</ul>
+<p>因此, 从任何角度讲我都要寻找下一个, 更优秀的富文本编辑器.</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>大致了解 draft.js 并查看了一两个 demo, 我就已经发现, 使用 draft.js 要实现我上面描述的需求简直太简单了.</p>
+<p>大致就如这个 <a href="https://github.com/myanbin/myeditor" target="_blank" rel="external">myeditor demo</a> 所示.</p>
+<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><ul>
+<li><a href="https://juejin.im/entry/597be4d76fb9a03c32238e80" target="_blank" rel="external">非常优秀的 draft 入门指南</a></li>
+<li><a href="https://jpuri.github.io/react-draft-wysiwyg/#/demo" target="_blank" rel="external">一本正经的富文本编辑器, 比较使用, 仍需进一步定制</a></li>
+<li><a href="https://github.com/nikgraf/awesome-draft-js#standalone-editors-built-on-draftjs" target="_blank" rel="external">awesome draft, 大部分资料以及优秀 demos 实例集合</a></li>
+</ul>
+<p>最终, 我说的需求被砍掉了, PM 也不希望我现在就花时间进行优化.<br>所以, 我找到了解决方案, 但是没有时间和心力编写组件或者 demo.期待有时间提出优化吧.</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://teeeemoji.xyz/2017/10/17/learn-draft/">http://teeeemoji.xyz/2017/10/17/learn-draft/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
 
 
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTIxNi83NzY1">
+	<script type="text/ls-javascript" id="livere-discuss-script">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/10/16/qiniu-upload/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -987,6 +1181,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

@@ -3,6 +3,53 @@
   
     
     <entry>
+      <title><![CDATA[draft 学习笔记]]></title>
+      <url>/2017/10/17/learn-draft/</url>
+      <content type="html"><![CDATA[<h1 id="draft-学习笔记"><a href="#draft-学习笔记" class="headerlink" title="draft 学习笔记"></a>draft 学习笔记</h1><p>draft.js 是 facebook 的一个基于 react 的 <em>编辑器</em> 类库.它强于一般的 <em>编辑器</em>/<em>富文本编辑器</em> 插件或组件.</p>
+<ul>
+<li>draft.js 提供的数据结构&amp;工具方法, 可以非常快速方便得在 draft.js 上层构建一个功能完善的富文本编辑器.</li>
+</ul>
+<blockquote>
+<p>因此 draft.js 不是普通的<em>富文本编辑器</em>, 他是构成<strong>富文本编辑器</strong>的<strong>基础设施</strong></p>
+</blockquote>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>hcm 项目中需要使用到富文本编辑器, 用于编辑一个<em>邮件模板</em>.</p>
+<p><em>邮件模板</em>中就会存在<strong>变量</strong>, 通常是用特殊符号包裹起来的一小块, 如我做的项目中的 <code>${variable}</code> ,用 <code>${}</code>包裹起来.</p>
+<p>需求: 为了更清晰地看到整个模板中, <em>变量的位置</em>, <code>${}</code> 包裹起来的文本需要高亮显示.</p>
+<p>由于之前使用的富文本编辑器 froala-react-wysiwyg 不能完美兼容 react, 并且实现这个需求的过程存在不少坑:</p>
+<ul>
+<li>性能问题: 每次输入都要正则匹配全部的内容 (这里已经通过动作延迟, 优化了部分性能)</li>
+<li>undo/redo栈丢失: 正则匹配完, 并重新设置富文本编辑器内容, 会造成 undo/redo 栈丢失</li>
+<li>输入光标位置重置: 每次重置富文本编辑器内容, 都会丢失光标位置, 这一点是硬伤无法解决</li>
+</ul>
+<p>因此, 从任何角度讲我都要寻找下一个, 更优秀的富文本编辑器.</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>大致了解 draft.js 并查看了一两个 demo, 我就已经发现, 使用 draft.js 要实现我上面描述的需求简直太简单了.</p>
+<p>大致就如这个 <a href="https://github.com/myanbin/myeditor" target="_blank" rel="external">myeditor demo</a> 所示.</p>
+<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><ul>
+<li><a href="https://juejin.im/entry/597be4d76fb9a03c32238e80" target="_blank" rel="external">非常优秀的 draft 入门指南</a></li>
+<li><a href="https://jpuri.github.io/react-draft-wysiwyg/#/demo" target="_blank" rel="external">一本正经的富文本编辑器, 比较使用, 仍需进一步定制</a></li>
+<li><a href="https://github.com/nikgraf/awesome-draft-js#standalone-editors-built-on-draftjs" target="_blank" rel="external">awesome draft, 大部分资料以及优秀 demos 实例集合</a></li>
+</ul>
+<p>最终, 我说的需求被砍掉了, PM 也不希望我现在就花时间进行优化.<br>所以, 我找到了解决方案, 但是没有时间和心力编写组件或者 demo.期待有时间提出优化吧.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 学习笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> react </tag>
+            
+            <tag> 富文本编辑器 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用 alfred wrokflow 更舒服地写 blog]]></title>
       <url>/2017/10/16/qiniu-upload/</url>
       <content type="html"><![CDATA[<h1 id="使用-alfred-wrokflow-更舒服地写-blog"><a href="#使用-alfred-wrokflow-更舒服地写-blog" class="headerlink" title="使用 alfred wrokflow 更舒服地写 blog"></a>使用 alfred wrokflow 更舒服地写 blog</h1><h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>之前提到过如何更舒服地编写 blog, 已经大大简化了上传图片的步骤.</p>
@@ -406,9 +453,9 @@ console.dir(argv);
         
         <tags>
             
-            <tag> 搭建博客 </tag>
-            
             <tag> testing </tag>
+            
+            <tag> 搭建博客 </tag>
             
         </tags>
         
@@ -445,11 +492,11 @@ alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="
         
         <tags>
             
+            <tag> testing </tag>
+            
             <tag> 搭建博客 </tag>
             
             <tag> hexo </tag>
-            
-            <tag> testing </tag>
             
         </tags>
         
