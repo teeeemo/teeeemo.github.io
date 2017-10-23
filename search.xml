@@ -3,6 +3,82 @@
   
     
     <entry>
+      <title><![CDATA[使用 hammerspoon 提升工作效率]]></title>
+      <url>/2017/10/23/use-hammerspoon/</url>
+      <content type="html"><![CDATA[<h1 id="使用-hammerspoon-提升工作效率"><a href="#使用-hammerspoon-提升工作效率" class="headerlink" title="使用 hammerspoon 提升工作效率"></a>使用 hammerspoon 提升工作效率</h1><p>分享会上, 吴俊分享了一款软件 -<strong><a href="http://www.hammerspoon.org/" target="_blank" rel="external">hammerspoon</a></strong>, 功能就是让手指可以不用脱离键盘的主要工作区域.</p>
+<p>这款软件可以实现, 在 mac 下定义全局快捷键, 可以对这些快捷键进行变成, 以完成一些特的操作,并且提供了强大的 API.</p>
+<a id="more"></a>
+<p><img src="http://www.hammerspoon.org/images/hammerspoon.png" alt=""></p>
+<p>这款软件跟 Alfred 的区别在于, 它对 mac 系统的支持特别好, 提供了很多直接操作 mac 系统窗口的 API, 还提供了直接操作电脑硬件如 蓝牙/wifi/屏幕/开关机之类的接口.可以直接改变你操作电脑的方式.</p>
+<h1 id="简单地使用-hammerspoon"><a href="#简单地使用-hammerspoon" class="headerlink" title="简单地使用 hammerspoon"></a>简单地使用 hammerspoon</h1><p>根据吴俊描述, 我对 hammerspoon 的功能非常感兴趣.</p>
+<blockquote>
+<p>使用 hammmerspoon 重新定义快捷键, 代替方向键(上下左右).</p>
+<p>我使用 ctrl + IKJL 代替方向键. 吴俊使用 vim 编辑器的配置(ctrl + JKL;)</p>
+<p>我是觉得 vim 的配置反人类啊, 我来用就分分钟按错, 更影响效率</p>
+</blockquote>
+<p>因为, 如果我使用机械键盘工作的话, 手距离触摸板的距离会非常远, 频繁切换手的状态会分散精力的.(另一个是我的机械键盘是61的, 没有方向键, 右手去找 fn 也是一件不愉快的事情)</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>以下内容都是 teeeemoji 参考 <strong><a href="http://www.hammerspoon.org/docs/index.html" target="_blank" rel="external">官方文档</a></strong> 写出来的.</p>
+<ul>
+<li><a href="http://www.hammerspoon.org/docs/hs.hotkey.html#bind" target="_blank" rel="external">hotkey 文档, 如何定义一个快捷键</a>, 这个简单, 照抄光网的 demo 都可以知道如何定义一个快捷键. (还是标明,关键在 <strong>bind</strong> 方法)</li>
+</ul>
+<blockquote>
+<p>值的注意的是, 上下左右键长按的时候, 是有 repeat 事件的. 因此记得写 reaptFn.而释放按键的事件,我是不需要的, 因此置为 nil.</p>
+</blockquote>
+<ul>
+<li><a href="http://www.hammerspoon.org/docs/hs.eventtap.html#keyStrokes" target="_blank" rel="external">eventtap 点击事件文档</a>, 不管鼠标还是键盘的点击事件都在这个文档里面.触发按钮事件的 API 是 <strong>keyStroke</strong></li>
+</ul>
+<blockquote>
+<p>值的注意的是, keyStroke 方法有一个参数 delay, 默认是200ms, 使用默认配置的时候, 按钮重复速度十分慢, 体验非常差. 我设置为0后, 就变得跟系统的按键重复配置一致了.</p>
+</blockquote>
+<h2 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h2><p>下面贴具体配置</p>
+<pre><code class="javascript">hs.hotkey.bind({&quot;ctrl&quot;}, &quot;I&quot;, function()
+  hs.eventtap.keyStroke({},&#39;up&#39;,0);
+end,nil,function()
+  hs.eventtap.keyStroke({},&#39;up&#39;,0);
+end);
+
+hs.hotkey.bind({&quot;ctrl&quot;}, &quot;K&quot;, function()
+  hs.eventtap.keyStroke({},&#39;down&#39;,0);
+end,nil,function()
+  hs.eventtap.keyStroke({},&#39;down&#39;,0);
+end);
+
+hs.hotkey.bind({&quot;ctrl&quot;}, &quot;J&quot;, function()
+  hs.eventtap.keyStroke({},&#39;left&#39;,0);
+end,nil,function()
+  hs.eventtap.keyStroke({},&#39;left&#39;,0);
+end);
+
+hs.hotkey.bind({&quot;ctrl&quot;}, &quot;L&quot;, function()
+  hs.eventtap.keyStroke({},&#39;right&#39;,0);
+end,nil,function()
+  hs.eventtap.keyStroke({},&#39;right&#39;,0);
+end);
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+            <category> mac 使用 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hammerspoon </tag>
+            
+            <tag> mac 软件 </tag>
+            
+            <tag> 效率 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Emitter 学习笔记]]></title>
       <url>/2017/10/21/learn-emitter/</url>
       <content type="html"><![CDATA[<h1 id="Emitter-学习笔记"><a href="#Emitter-学习笔记" class="headerlink" title="Emitter 学习笔记"></a>Emitter 学习笔记</h1><h2 id="学习感想"><a href="#学习感想" class="headerlink" title="学习感想"></a>学习感想</h2><p>最好的学习资料是<a href="https://nodejs.org/api/events.html" target="_blank" rel="external">官方文档</a>, 由于是英语的, 可能造成心里压力, 阅读不下去(我就是).</p>
@@ -618,11 +694,11 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
-            <tag> 七牛云 </tag>
-            
             <tag> markdown </tag>
             
             <tag> 写博客 </tag>
+            
+            <tag> 七牛云 </tag>
             
             <tag> 图床 </tag>
             
@@ -885,9 +961,9 @@ console.dir(argv);
         
         <tags>
             
-            <tag> 搭建博客 </tag>
-            
             <tag> testing </tag>
+            
+            <tag> 搭建博客 </tag>
             
         </tags>
         
@@ -924,11 +1000,11 @@ alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="
         
         <tags>
             
+            <tag> testing </tag>
+            
             <tag> 搭建博客 </tag>
             
             <tag> hexo </tag>
-            
-            <tag> testing </tag>
             
         </tags>
         

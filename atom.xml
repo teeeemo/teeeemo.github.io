@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-21T15:37:31.000Z</updated>
+  <updated>2017-10-23T14:00:04.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 hammerspoon 提升工作效率</title>
+    <link href="http://teeeemoji.xyz/2017/10/23/use-hammerspoon/"/>
+    <id>http://teeeemoji.xyz/2017/10/23/use-hammerspoon/</id>
+    <published>2017-10-23T14:00:04.000Z</published>
+    <updated>2017-10-23T14:00:04.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用-hammerspoon-提升工作效率&quot;&gt;&lt;a href=&quot;#使用-hammerspoon-提升工作效率&quot; class=&quot;headerlink&quot; title=&quot;使用 hammerspoon 提升工作效率&quot;&gt;&lt;/a&gt;使用 hammerspoon 提升工作效率&lt;/h1&gt;&lt;p&gt;分享会上, 吴俊分享了一款软件 -&lt;strong&gt;&lt;a href=&quot;http://www.hammerspoon.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hammerspoon&lt;/a&gt;&lt;/strong&gt;, 功能就是让手指可以不用脱离键盘的主要工作区域.&lt;/p&gt;
+&lt;p&gt;这款软件可以实现, 在 mac 下定义全局快捷键, 可以对这些快捷键进行变成, 以完成一些特的操作,并且提供了强大的 API.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="mac 使用" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/mac-%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="hammerspoon" scheme="http://teeeemoji.xyz/tags/hammerspoon/"/>
+    
+      <category term="mac 软件" scheme="http://teeeemoji.xyz/tags/mac-%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="效率" scheme="http://teeeemoji.xyz/tags/%E6%95%88%E7%8E%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Emitter 学习笔记</title>
@@ -151,11 +178,11 @@
       <category term="写作" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/%E5%86%99%E4%BD%9C/"/>
     
     
-      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
-    
       <category term="markdown" scheme="http://teeeemoji.xyz/tags/markdown/"/>
     
       <category term="写博客" scheme="http://teeeemoji.xyz/tags/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
     
       <category term="图床" scheme="http://teeeemoji.xyz/tags/%E5%9B%BE%E5%BA%8A/"/>
     
@@ -263,9 +290,9 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
+    
+      <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -286,11 +313,11 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
+    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://teeeemoji.xyz/tags/hexo/"/>
-    
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
