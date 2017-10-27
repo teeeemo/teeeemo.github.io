@@ -3,6 +3,47 @@
   
     
     <entry>
+      <title><![CDATA[Date.parse 的浏览器兼容性说明]]></title>
+      <url>/2017/10/27/learn-new-date/</url>
+      <content type="html"><![CDATA[<h1 id="Date-parse-的浏览器兼容性说明"><a href="#Date-parse-的浏览器兼容性说明" class="headerlink" title="Date.parse 的浏览器兼容性说明"></a>Date.parse 的浏览器兼容性说明</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>项目中的时间组件出现了浏览器兼容性问题, bug 排查了半天, 得到如下结果</p>
+<blockquote>
+<p>时间格式是:  time(<code>YYYY-MM-DD HH:mm:dd</code>)</p>
+<p>使用如下方法构造 Date 对象: timeObj = new Date(time);</p>
+<p>在 Chrome 下风平浪静, 正确获得了 timeObj</p>
+<p>在 safari 下, 输出 <code>Invalid Date</code></p>
+</blockquote>
+<a id="more"></a>
+<h2 id="资料搜索"><a href="#资料搜索" class="headerlink" title="资料搜索"></a>资料搜索</h2><p>先从 MDN 文档开始, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="external">Date 的 MDN 文档</a> , 关于 Date 的构造方法的<code>new Date(datestring)</code> 形式的入参介绍:</p>
+<p><img src="http://ox32k19xb.bkt.clouddn.com/2017/1509075253378.png" width="372"></p>
+<p>(Note: parsing of date strings with the Date constructor (and Date.parse, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.)细红线描述的意思是, 传入 Date 构造方法以及 Date.parse 中的日期字符串格式, 强依赖于浏览器的实现.</p>
+<p><strong>这说明随意使用 Date 构造对象或使用 Date.parse 方法转换时间格式, 是有风险的</strong></p>
+<p>那么有没有一种 datastring 格式支持全平台浏览器呢?这里要点击进入粗红线指向的 <strong>协议文档</strong> <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15" target="_blank" rel="external">version of ISO8601</a>, 找到 <strong>15.9.1.15 Date Time String Format</strong></p>
+<p><img src="http://ox32k19xb.bkt.clouddn.com/2017/1509075240006.png" width="464"><br><img src="http://ox32k19xb.bkt.clouddn.com/2017/1509075563437.png" width="448"></p>
+<p>规范的全平台通用时间格式的: YYYY-MM-DDTHH:mm:ss ….. 中间要有个 T 的</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>官方文档, 各种协议文档, 是解决兼容性的好帮手!</p>
+<p>如果官方文档和协议文档都不能帮助你解决问题, 再去 googl* 各种扫操作吧.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Date </tag>
+            
+            <tag> 时间格式 </tag>
+            
+            <tag> 浏览器兼容性 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用 hammerspoon 提升工作效率]]></title>
       <url>/2017/10/23/use-hammerspoon/</url>
       <content type="html"><![CDATA[<h1 id="使用-hammerspoon-提升工作效率"><a href="#使用-hammerspoon-提升工作效率" class="headerlink" title="使用 hammerspoon 提升工作效率"></a>使用 hammerspoon 提升工作效率</h1><p>分享会上, 吴俊分享了一款软件 -<strong><a href="http://www.hammerspoon.org/" target="_blank" rel="external">hammerspoon</a></strong>, 功能就是让手指可以不用脱离键盘的主要工作区域.</p>
@@ -446,11 +487,11 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
+            <tag> nodejs </tag>
+            
             <tag> 学习 </tag>
             
             <tag> emitter </tag>
-            
-            <tag> nodejs </tag>
             
             <tag> emit </tag>
             
@@ -498,13 +539,13 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
+            <tag> mac </tag>
+            
             <tag> Webstrom </tag>
             
             <tag> idea </tag>
             
             <tag> bash </tag>
-            
-            <tag> mac </tag>
             
         </tags>
         
@@ -694,11 +735,11 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
+            <tag> 七牛云 </tag>
+            
             <tag> markdown </tag>
             
             <tag> 写博客 </tag>
-            
-            <tag> 七牛云 </tag>
             
             <tag> 图床 </tag>
             
@@ -869,9 +910,9 @@ console.dir(argv);
         
         <tags>
             
-            <tag> nodejs </tag>
-            
             <tag> node </tag>
+            
+            <tag> nodejs </tag>
             
             <tag> minimist </tag>
             

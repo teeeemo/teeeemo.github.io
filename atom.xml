@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-23T14:00:04.000Z</updated>
+  <updated>2017-10-27T03:42:00.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Date.parse 的浏览器兼容性说明</title>
+    <link href="http://teeeemoji.xyz/2017/10/27/learn-new-date/"/>
+    <id>http://teeeemoji.xyz/2017/10/27/learn-new-date/</id>
+    <published>2017-10-27T03:42:00.000Z</published>
+    <updated>2017-10-27T03:42:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Date-parse-的浏览器兼容性说明&quot;&gt;&lt;a href=&quot;#Date-parse-的浏览器兼容性说明&quot; class=&quot;headerlink&quot; title=&quot;Date.parse 的浏览器兼容性说明&quot;&gt;&lt;/a&gt;Date.parse 的浏览器兼容性说明&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;项目中的时间组件出现了浏览器兼容性问题, bug 排查了半天, 得到如下结果&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;时间格式是:  time(&lt;code&gt;YYYY-MM-DD HH:mm:dd&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;使用如下方法构造 Date 对象: timeObj = new Date(time);&lt;/p&gt;
+&lt;p&gt;在 Chrome 下风平浪静, 正确获得了 timeObj&lt;/p&gt;
+&lt;p&gt;在 safari 下, 输出 &lt;code&gt;Invalid Date&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://teeeemoji.xyz/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Date" scheme="http://teeeemoji.xyz/tags/Date/"/>
+    
+      <category term="时间格式" scheme="http://teeeemoji.xyz/tags/%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/"/>
+    
+      <category term="浏览器兼容性" scheme="http://teeeemoji.xyz/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 hammerspoon 提升工作效率</title>
@@ -61,11 +91,11 @@
       <category term="技术" scheme="http://teeeemoji.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="nodejs" scheme="http://teeeemoji.xyz/tags/nodejs/"/>
+    
       <category term="学习" scheme="http://teeeemoji.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="emitter" scheme="http://teeeemoji.xyz/tags/emitter/"/>
-    
-      <category term="nodejs" scheme="http://teeeemoji.xyz/tags/nodejs/"/>
     
       <category term="emit" scheme="http://teeeemoji.xyz/tags/emit/"/>
     
@@ -90,13 +120,13 @@
       <category term="效率" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/%E6%95%88%E7%8E%87/"/>
     
     
+      <category term="mac" scheme="http://teeeemoji.xyz/tags/mac/"/>
+    
       <category term="Webstrom" scheme="http://teeeemoji.xyz/tags/Webstrom/"/>
     
       <category term="idea" scheme="http://teeeemoji.xyz/tags/idea/"/>
     
       <category term="bash" scheme="http://teeeemoji.xyz/tags/bash/"/>
-    
-      <category term="mac" scheme="http://teeeemoji.xyz/tags/mac/"/>
     
   </entry>
   
@@ -178,11 +208,11 @@
       <category term="写作" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/%E5%86%99%E4%BD%9C/"/>
     
     
+      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+    
       <category term="markdown" scheme="http://teeeemoji.xyz/tags/markdown/"/>
     
       <category term="写博客" scheme="http://teeeemoji.xyz/tags/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="七牛云" scheme="http://teeeemoji.xyz/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
     
       <category term="图床" scheme="http://teeeemoji.xyz/tags/%E5%9B%BE%E5%BA%8A/"/>
     
@@ -233,9 +263,9 @@
       <category term="node" scheme="http://teeeemoji.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/node/"/>
     
     
-      <category term="nodejs" scheme="http://teeeemoji.xyz/tags/nodejs/"/>
-    
       <category term="node" scheme="http://teeeemoji.xyz/tags/node/"/>
+    
+      <category term="nodejs" scheme="http://teeeemoji.xyz/tags/nodejs/"/>
     
       <category term="minimist" scheme="http://teeeemoji.xyz/tags/minimist/"/>
     
