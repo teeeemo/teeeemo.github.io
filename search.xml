@@ -102,7 +102,7 @@ end);
             
             <category> 日常 </category>
             
-            <category> mac 使用 </category>
+            <category> 效率 </category>
             
         </categories>
         
@@ -478,7 +478,7 @@ myEmitter.emit(&#39;me&#39;);
       
         <categories>
             
-            <category> 学习笔记 </category>
+            <category> 学习 </category>
             
             <category> 技术 </category>
             
@@ -487,11 +487,11 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
-            <tag> nodejs </tag>
-            
             <tag> 学习 </tag>
             
             <tag> emitter </tag>
+            
+            <tag> nodejs </tag>
             
             <tag> emit </tag>
             
@@ -539,13 +539,13 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
-            <tag> mac </tag>
-            
             <tag> Webstrom </tag>
             
             <tag> idea </tag>
             
             <tag> bash </tag>
+            
+            <tag> mac </tag>
             
         </tags>
         
@@ -583,7 +583,9 @@ myEmitter.emit(&#39;me&#39;);
       
         <categories>
             
-            <category> 学习笔记 </category>
+            <category> 学习 </category>
+            
+            <category> 技术 </category>
             
         </categories>
         
@@ -593,6 +595,8 @@ myEmitter.emit(&#39;me&#39;);
             <tag> react </tag>
             
             <tag> 富文本编辑器 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
         
@@ -653,7 +657,7 @@ myEmitter.emit(&#39;me&#39;);
             
             <category> 日常 </category>
             
-            <category> mac使用 </category>
+            <category> 效率 </category>
             
         </categories>
         
@@ -901,18 +905,18 @@ console.dir(argv);
       
         <categories>
             
-            <category> 学习笔记 </category>
+            <category> 学习 </category>
             
-            <category> node </category>
+            <category> 技术 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> node </tag>
-            
             <tag> nodejs </tag>
+            
+            <tag> node </tag>
             
             <tag> minimist </tag>
             
