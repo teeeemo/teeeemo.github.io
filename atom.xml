@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-10-27T03:42:00.000Z</updated>
+  <updated>2017-12-08T06:42:52.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>one-script-push-to-icode</title>
+    <link href="http://teeeemoji.xyz/2017/12/08/one-script-push-to-icode/"/>
+    <id>http://teeeemoji.xyz/2017/12/08/one-script-push-to-icode/</id>
+    <published>2017-12-08T06:41:21.000Z</published>
+    <updated>2017-12-08T06:42:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;代码 push 到 BD 的 XCode 的时候, (不能使用 sourceTree =&amp;gt; 可以使用, 但是配置不可保存, 就是说每次使用都要重新设置, 更费心费力)&lt;/p&gt;
+&lt;p&gt;需要在 shell 中输入这么一串东西: git push
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Date.parse 的浏览器兼容性说明</title>
@@ -324,9 +347,9 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
@@ -347,11 +370,11 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
-    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://teeeemoji.xyz/tags/hexo/"/>
+    
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   

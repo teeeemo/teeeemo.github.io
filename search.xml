@@ -3,6 +3,68 @@
   
     
     <entry>
+      <title><![CDATA[one-script-push-to-icode]]></title>
+      <url>/2017/12/08/one-script-push-to-icode/</url>
+      <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>代码 push 到 BD 的 XCode 的时候, (不能使用 sourceTree =&gt; 可以使用, 但是配置不可保存, 就是说每次使用都要重新设置, 更费心费力)</p>
+<p>需要在 shell 中输入这么一串东西: git push origin branch_name:refs/for/branch_namme</p>
+<p>要打的字就变多了, push 代码的动作变得不流畅, 没有幸福感</p>
+<h2 id="优化步骤"><a href="#优化步骤" class="headerlink" title="优化步骤"></a>优化步骤</h2><h3 id="v2"><a href="#v2" class="headerlink" title="v2"></a>v2</h3><p>更新 v2 版本, 添加更简单地功能, 运行脚本自动提交当前分支代码</p>
+<pre><code class="bash">
+#! /bin/bash
+
+# 使用方法: npm run push[ branch_name]
+# branch_name 存在: push branch_name to icode
+#             不存在: push current branch_name to icode
+
+if [ -n &quot;$1&quot; ];then
+curBranch=$1
+echo &quot;pushing branch is ${curBranch}&quot;
+else
+curBranch=$(git branch | awk &#39;/\*/ { print $2; }&#39;)
+# 另一种获取当前 branch_name 的方法
+# git symbolic-ref --short HEAD
+echo &quot;current branch is ${curBranch}&quot;
+fi
+
+git push origin ${curBranch}:refs/for/${curBranch}
+</code></pre>
+<h4 id="两种获取当前分支名的资料来源"><a href="#两种获取当前分支名的资料来源" class="headerlink" title="两种获取当前分支名的资料来源"></a>两种获取当前分支名的资料来源</h4><pre><code>
+$ git branch | awk &#39;/\*/ { print $2; }&#39;
+$ git rev-parse --abbrev-ref HEAD
+</code></pre><p><a href="https://stackoverflow.com/questions/1417957/show-just-the-current-branch-in-git" target="_blank" rel="external">https://stackoverflow.com/questions/1417957/show-just-the-current-branch-in-git</a></p>
+<h3 id="v1"><a href="#v1" class="headerlink" title="v1"></a>v1</h3><ol>
+<li>编写自动化 shell 脚本 <strong> push.sh </strong>,  可以放在本地, 也可以放在项目中</li>
+</ol>
+<pre><code>
+# 使用方法: ./path_to_shell/push.sh branch_name
+
+git push $1:refs/for/$1
+</code></pre><p><strong>注意</strong>: 使用 touch 生成的 push.sh 可能不具备执行权限</p>
+<ul>
+<li><p>可以使用 <strong>chmod 777 push.sh</strong>改一下权限</p>
+</li>
+<li><p>也可以使用 sh ./path_to_shell/push.sh branch 来执行 shell 脚本</p>
+</li>
+</ul>
+<ol>
+<li>在 package 中增加 script</li>
+</ol>
+<p>这样, 执行 <strong>npm run push branch_name</strong>就能执行 push 到对应 branch_name 的动作</p>
+<pre><code>
+&quot;push&quot;: &quot;./path_to_shell/push.sh&quot;,
+</code></pre><ol>
+<li>在 bash_profile 中增加一个 alias</li>
+</ol>
+<pre><code>
+alias nrp=&quot;npm run push&quot;
+</code></pre><p>这样提交代码的时候, 要打的字就变成 “nrp branch_name”</p>
+<h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>感觉舒服多了</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Date.parse 的浏览器兼容性说明]]></title>
       <url>/2017/10/27/learn-new-date/</url>
       <content type="html"><![CDATA[<h1 id="Date-parse-的浏览器兼容性说明"><a href="#Date-parse-的浏览器兼容性说明" class="headerlink" title="Date.parse 的浏览器兼容性说明"></a>Date.parse 的浏览器兼容性说明</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>项目中的时间组件出现了浏览器兼容性问题, bug 排查了半天, 得到如下结果</p>
@@ -1006,9 +1068,9 @@ console.dir(argv);
         
         <tags>
             
-            <tag> testing </tag>
-            
             <tag> 搭建博客 </tag>
+            
+            <tag> testing </tag>
             
         </tags>
         
@@ -1045,11 +1107,11 @@ alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="
         
         <tags>
             
-            <tag> testing </tag>
-            
             <tag> 搭建博客 </tag>
             
             <tag> hexo </tag>
+            
+            <tag> testing </tag>
             
         </tags>
         
