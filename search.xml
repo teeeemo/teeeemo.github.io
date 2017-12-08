@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[one-script-push-to-icode]]></title>
+      <title><![CDATA[一个脚本 push 代码到代码库]]></title>
       <url>/2017/12/08/one-script-push-to-icode/</url>
       <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>代码 push 到 BD 的 XCode 的时候, (不能使用 sourceTree =&gt; 可以使用, 但是配置不可保存, 就是说每次使用都要重新设置, 更费心费力)</p>
 <p>需要在 shell 中输入这么一串东西: git push origin branch_name:refs/for/branch_namme</p>
@@ -601,13 +601,13 @@ myEmitter.emit(&#39;me&#39;);
         
         <tags>
             
+            <tag> mac </tag>
+            
             <tag> Webstrom </tag>
             
             <tag> idea </tag>
             
             <tag> bash </tag>
-            
-            <tag> mac </tag>
             
         </tags>
         
@@ -1068,9 +1068,9 @@ console.dir(argv);
         
         <tags>
             
-            <tag> 搭建博客 </tag>
-            
             <tag> testing </tag>
+            
+            <tag> 搭建博客 </tag>
             
         </tags>
         
@@ -1107,11 +1107,11 @@ alert(&quot;hello world&quot;);</code><br><a href="http://teeeemoji.xyz" title="
         
         <tags>
             
+            <tag> testing </tag>
+            
             <tag> 搭建博客 </tag>
             
             <tag> hexo </tag>
-            
-            <tag> testing </tag>
             
         </tags>
         

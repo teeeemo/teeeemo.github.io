@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://teeeemoji.xyz/"/>
-  <updated>2017-12-08T06:42:52.000Z</updated>
+  <updated>2017-12-08T06:43:58.000Z</updated>
   <id>http://teeeemoji.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>one-script-push-to-icode</title>
+    <title>一个脚本 push 代码到代码库</title>
     <link href="http://teeeemoji.xyz/2017/12/08/one-script-push-to-icode/"/>
     <id>http://teeeemoji.xyz/2017/12/08/one-script-push-to-icode/</id>
     <published>2017-12-08T06:41:21.000Z</published>
-    <updated>2017-12-08T06:42:52.000Z</updated>
+    <updated>2017-12-08T06:43:58.000Z</updated>
     
     <summary type="html">
     
@@ -143,13 +143,13 @@
       <category term="效率" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/%E6%95%88%E7%8E%87/"/>
     
     
+      <category term="mac" scheme="http://teeeemoji.xyz/tags/mac/"/>
+    
       <category term="Webstrom" scheme="http://teeeemoji.xyz/tags/Webstrom/"/>
     
       <category term="idea" scheme="http://teeeemoji.xyz/tags/idea/"/>
     
       <category term="bash" scheme="http://teeeemoji.xyz/tags/bash/"/>
-    
-      <category term="mac" scheme="http://teeeemoji.xyz/tags/mac/"/>
     
   </entry>
   
@@ -347,9 +347,9 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
+    
+      <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -370,11 +370,11 @@
       <category term="日常" scheme="http://teeeemoji.xyz/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
+      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
+    
       <category term="搭建博客" scheme="http://teeeemoji.xyz/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="hexo" scheme="http://teeeemoji.xyz/tags/hexo/"/>
-    
-      <category term="testing" scheme="http://teeeemoji.xyz/tags/testing/"/>
     
   </entry>
   
